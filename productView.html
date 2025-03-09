@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="productView.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      r
+    />
+    <title>Order</title>
+  </head>
+  <body>
+    <header class="section-Header">
+      <script  type="module" src="src/Header.js"></script>
+    </header>
+    <main>
+      <section class="container">
+        <section class="productImage">
+          <img
+            src="https://m.media-amazon.com/images/I/610k-UsImNL.jpg"
+            alt="logo"
+          />
+          <div class="icon-container">
+            <i class="fa-solid fa-magnifying-glass" style="color: #000000"></i>
+          </div>
+        </section>
+
+        <section class="productDesc">
+          <div class="ImageContent">
+            <h1>Hand Sanitizer</h1>
+            <h3>£15.00 + Free Shipping</h3>
+            <p>
+              Neque porro quisquam est, qui dolore ipsum quia dolor sit amet,
+              consectetur adipisci velit, sed quia non incidunt lores ta porro
+              ame. numquam eius modi tempora incidunt lores ta porro ame.
+            </p>
+            <div class="Qty-btn">
+              <input placeholder="0" type="number" />
+              <button>ADD TO CART</button>
+            </div>
+            <h2>Category:<span>Groceries</span></h2>
+          </div>
+        </section>
+      </section>
+      <section class="description-reviews">
+        <div class="customer-product">
+          <ul>
+            <p href="#">Description</p>
+            <!-- <p class="description-content">
+              Neque porro quisquam est, qui dolore ipsum quia dolor sit amet,
+              consectetur adipisci velit, sed quia non incidunt lores ta porro
+              ame. numquam eius modi tempora incidunt lores ta porro ame.
+            </p> -->
+          </ul>
+        </div>
+        <div class="customer-product">
+          <ul>
+            <p href="#">Reviews</p>
+            <form class="ParentForm">
+              <p>There are no reviews yet.</p>
+              <section class="FormContainer">
+                <h3>Be the first to review “Handpicked Red Chillies”</h3>
+                <h4>
+                  Your email address will not be published. Required fields are
+                  marked *
+                </h4>
+                <h4>
+                  Your rating *<i
+                    class="fa-regular fa-star"
+                    style="color: #000000"
+                  ></i>
+                  <i class="fa-regular fa-star" style="color: #000000"></i>
+                  <i class="fa-regular fa-star" style="color: #000000"></i>
+                  <i class="fa-regular fa-star" style="color: #000000"></i>
+                  <i class="fa-regular fa-star" style="color: #000000"></i>
+                </h4>
+
+                <label>Your Review*</label>
+                <input type="text" value="Write Your Review" />
+                <label for="Name">Name</label>
+                <input type="text" />
+                <label for="email">Email</label>
+                <input type="email" />
+
+                <!-- <label
+                  >Save my name,email,and website in this browswer for the next
+                  time i comment</label
+                >
+                <input type="checkbox" /> -->
+                <div class="checkbox-container">
+  <input type="checkbox" id="remember-me">
+  <label for="remember-me">Save my name, email, and website in this browser for the next time I comment</label>
+</div>
+ <button class="ShopNow">
+          Submit
+        </button>
+              </section>
+            </form>
+          </ul>
+         
+        </div>
+      </section>
+         <Footer class="section-Footer">
+     <script type="module" src="./src/footer.js"> </script>
+      </Footer>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/5e42a819a3.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

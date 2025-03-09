@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="CheckoutForm.css" />
+  </head>
+  <body>
+    <header class="section-Header">
+      <script type="module" src="src/Header.js"></script>
+    </header>
+    <main>
+      <section class="FormContainer">
+        <section class="BillingDetails">
+          <form id="userForm">
+            <h1>Billing Details</h1>
+            <label for="FirstName">First Name <span></span></label>
+            <input required type="text" />
+            <label for="LastName">Last Name</label>
+            <input required type="text" />
+            <label for="Country">Country/Region</label>
+            <input required type="text" />
+            <label for="">Street address</label>
+            <input required type="text" />
+
+            <label for="">House number and street name Apartment</label>
+            <input required type="text" />
+            <label for=""> Town / City</label>
+            <input required type="text" />
+            <label for="">State</label>
+            <input required type="text" />
+            <label for=""> PIN Code </label>
+            <input required type="number" />
+            <label for="">Phone Number</label>
+            <input required type="number" />
+            <label for="">Email Address</label>
+            <input required type="email" />
+            <section class="placeOrder">
+              <button type="submit">Submit</button>
+            </section>
+          </form>
+        </section>
+        <section class="YourOrder">
+          <h2>Your Order</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hand Sanitizer</td>
+                <td class="totalPrice">100</td>
+              </tr>
+              <tr>
+                <td>total</td>
+                <td class="totalPrice">100</td>
+              </tr>
+            </tbody>
+          </table>
+          <section class="payments">
+            <div class="listContainer">
+              <li><input type="radio" name="payment" id="" />Check Payments</li>
+              <li><input type="radio" name="payment" id="" />Cash On delivery</li>
+            </div>
+           
+          </section>
+          <section class="placeOrder">
+            <button>Place Order</button>
+          </section>
+        </section>
+      </section>
+        <Footer class="section-Footer">
+     <script type="module" src="./src/footer.js"> </script>
+      </Footer>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/5e42a819a3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="src/checkoutForm.js"></script>
+  </body>
+</html>

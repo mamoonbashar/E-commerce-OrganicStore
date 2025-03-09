@@ -1,0 +1,772 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Merriweather Sans";
+  height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
+}
+/* Nav Styling starts here  */
+#nav {
+  height: 70px;
+  /* background-color: lightcyan; */
+  border-bottom-style: dashed;
+  border-bottom-color: green;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navIcons {
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+.ShoppingSideBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width:40%;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  transition: 0.6s ease;
+  align-items: center;
+  z-index: 999;
+  padding: 5px;
+  justify-content: space-between;
+}
+.ShoppingSideBar  a{
+     background-color: white;
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    border-style: dashed;
+  
+}
+@media (max-width:700px) {
+  .ShoppingSideBar{
+    width: 100%;
+  }
+}
+.CloseCart {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5vw;
+  border-bottom: 1px solid gray;
+  padding: 2%;
+}
+.SideBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+  justify-content: space-evenly;
+}
+.SideBar a {
+  text-decoration: none;
+  color: black;
+}
+.Close {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0px 10% 0px;
+  height: 5%;
+}
+.Close i {
+  font-size: 1.6em;
+  color: #0a990a;
+}
+.CompanyLogo {
+  width: 30vw;
+  height: 70px;
+  position: relative;
+  bottom: 10px;
+}
+.navIcons i {
+  font-size: 1em;
+}
+.navIcons a {
+  font-size: 1em;
+
+  text-decoration: none;
+  color: #333;
+}
+.navIcons i,
+h3 {
+  color: green;
+}
+.BurgerIcon {
+  display: none;
+  /* top: 29px; */
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  right: 51px;
+}
+/* Need to fix  */
+.cart-count {
+  background-color: greenyellow;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 50%;
+}
+.CartContainer {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* Nav Responsiveness */
+@media (max-width: 600px) {
+  #nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .navIcons {
+    display: none;
+  }
+  .BurgerIcon {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  .BurgerIcon a i {
+    font-size: 1.6em;
+  }
+}
+/* Nav Styling ends here  */
+
+/* Banner Starts here */
+
+
+main {
+  height: calc(100vh - 70px);
+  width: 100vw;
+}
+#Banner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1em;
+  width: 100vw;
+  height: 100%;
+}
+#BannerImage img {
+  width: 50vw;
+  height: 100%;
+  object-fit: contain;
+}
+/* need fixing */
+#ImageContent {
+  gap: 5%;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 100%;
+}
+#ImageContent img {
+  width: 20%;
+}
+/* need fixing */
+#ImageContent h1 {
+  font-size: clamp(0.5rem, 3vw, 2rem);
+  font-weight: bolder;
+}
+#ImageContent h5 {
+  font-size: clamp(1rem, 5vw, 2.5rem);
+  font-weight: bold;
+}
+
+#ImageContent p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#ContactInfo {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 40vh;
+  justify-items: center;
+  align-items: center;
+  padding: 1.5em;
+  gap: 5px;
+}
+.Info {
+  height: 15vh;
+  background-color: rgb(34, 27, 27);
+  /* gap: 0%; */
+  padding: 5%;
+  height: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+  width: 90%;
+  border-radius: 1em;
+  color: white;
+}
+
+/* Selling Products styling  */
+
+#BestSelling {
+  height: auto;
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the content horizontally */
+}
+
+#Heading-Image h1 {
+  font-size: 3em;
+}
+
+#Heading-Image {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10rem;
+  padding: 5%;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.ImageCard {
+  width: 20vw;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.ImageCard img {
+  width: 100%;
+  height: 100%; /* Keeps the aspect ratio of the image */
+  object-fit: cover; /* Ensures the image covers the entire container */
+  margin: 0;
+  padding: 0;
+  display: block;
+  height: auto;
+}
+
+.ImageContent {
+  margin: 0;
+  padding: 0;
+  height: 40%;
+  gap: 8%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3em;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: beige;
+}
+.ImageContent p {
+  color: grey;
+  font-size: 1.3vw;
+}
+.ImageContent h5 {
+  font-size: 1.3vw;
+}
+#GrocerieContainer {
+  height: max-content;
+  background-color: rgb(167, 160, 160);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2em;
+}
+
+#LeafImage img {
+}
+#grocery {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  gap: 5%;
+  padding: 7%;
+  list-style-type: none;
+}
+.GroceryCard {
+  height: 15em;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2%;
+}
+.GroceryCard {
+  background-color: white;
+  border-radius: 1rem;
+}
+.GroceryCard h1 {
+  font-size: 3vw;
+}
+.GroceryCard h4 {
+  font-size: 4vw;
+}
+/* All Buttons designing */
+.ShopNow {
+  max-height: max-content;
+  min-height: 60px;
+  max-width: 35%;
+  min-width: 25%;
+  gap: 1%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  position: relative;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(88, 146, 1);
+  align-items: center;
+}
+.GroceryCard .content-Div {
+}
+.GroceryCard .button-img {
+}
+.GroceryCard img {
+  border-radius: 1rem;
+  width: 25%;
+  height: 100%;
+}
+.GroceryCard div {
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+  width: 44%;
+  gap: 8%;
+}
+
+/* Discount Section */
+#Discount {
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-around;
+  padding: 6%;
+}
+#Discount h1 {
+  flex-grow: 1;
+  font-size: 30px;
+}
+#Discount {
+  color: white;
+  background-color: black;
+}
+
+/* Trending Products */
+#TrendingProducts {
+  height: auto;
+  padding: 40px;
+  width: 100%;
+  text-align: center;
+  gap: 50px;
+}
+#TrendingProducts h1 {
+  font-size: 40px;
+}
+.Trend-Heading {
+  background-color: aliceblue;
+}
+
+.Trending-InnerChild {
+}
+
+/* Customer Reviews stlying */
+
+#customerReviews {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  padding: 40px;
+}
+.Illustration {
+  position: absolute;
+  z-index: -1;
+  height: auto;
+  opacity: 0.3;
+}
+#ReviewsContainer {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  font-size: 25px;
+}
+#ReviewsContainer img {
+  width: 5%;
+  height: auto;
+}
+
+/* Review and Discount Card */
+.cardContainer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+  gap: 30px;
+  justify-content: center;
+  align-items: end;
+}
+.Discount-Card {
+  width: 30vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20%;
+  color: white;
+}
+.Discount-Card img {
+  width: 30vw;
+  height: 80vh;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  filter: brightness(0.3) contrast(0.8) blur(0.1px);
+  opacity: 0.9;
+  border-radius: 5px;
+}
+.Discount-Card p,
+button {
+  z-index: 1;
+}
+.Review-Card {
+  width: 30vw;
+  height: 70vh;
+  display: flex;
+  border-radius: 5px;
+  gap: 15%;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.ratingStars {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+.CustomerDetails {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 30%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.CustomerDetails img {
+  height: 65%;
+  width: 20%;
+  object-fit: cover;
+  border-radius: 50px;
+}
+.FeaturedBrands {
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  background-color: rgb(189, 189, 233);
+}
+.FeaturedBrands h1 {
+  font-size: 40px;
+}
+
+#QuickLinks {
+  height: auto;
+  width: 100vw;
+  background-color: black;
+  color: gray;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+#QuickLinks p {
+  font-size: 20px;
+}
+#QuickLinks h1 {
+  color: white;
+  font-size: 30px;
+}
+.QuickLinks2 h1,
+.QuickLinks2 p {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 10px;
+}
+.Quick h1,
+.Quick p {
+  margin: 20px;
+}
+#SocialMedia {
+  border-top: 2px solid gray;
+  padding: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+  color: gray;
+  background-color: black;
+  min-height: 20vh;
+  margin: 0;
+}
+#SocialMedia a i {
+  color: white;
+  width: 20px;
+  height: 30px;
+}
+.icon-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+}
+
+/* Responsiveness */
+
+/* Banner Responsivenes */
+@media (max-width: 600px) {
+  #Banner {
+    display: block;
+    width: 100%;
+    height: fit-content;
+  }
+  #ImageContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    text-align: justify;
+    height: 60%;
+  }
+  #BannerImage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Contact infoand Info Responsiveness */
+
+@media (max-width: 600px) {
+  #ContactInfo {
+    display: grid;
+    gap: 5px;
+    height: 90vh;
+    grid-template-columns: repeat(1, 1fr);
+    /* flex-flow: column wrap; */
+    padding: 4%;
+  }
+  .Info {
+    width: 100%;
+  }
+}
+
+/* Best Selling Responsiveness */
+
+@media (max-width: 600px) {
+  #BestSelling {
+    text-align: center;
+    height: auto;
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+  }
+  .ImageContent p,
+  .ImageContent h5 {
+    font-size: 1em;
+    color: #333;
+    text-align: center;
+  }
+  #cardsContainer {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+  }
+  .Stars {
+    font-size: 50%;
+  }
+}
+/* Grocerie Container */
+
+/* @media (max-width:600px) {
+  #GrocerieContainer{
+    width: 100%;
+    height: auto;
+  }
+  #grocery{
+
+  }
+} */
+
+@media (max-width: 600px) {
+  * {
+    box-sizing: border-box;
+  }
+  #GrocerieContainer {
+    background-color: white;
+    z-index: -1;
+  }
+  #grocery {
+    z-index: 0;
+  }
+  .GroceryCard {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    width: 70vw;
+    justify-content: left;
+    padding: 2%;
+    align-items: flex-start;
+  }
+  .GroceryCard img {
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+  }
+  .content-Div {
+    z-index: 1;
+    padding: 2%;
+    position: relative;
+    width: 100%;
+  }
+}
+#TrendingCardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10rem;
+  padding: 5%;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+/* TrendingProducts Responsiveness*/
+@media (max-width: 600px) {
+  #TrendingProducts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #TrendingCardsContainer {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  #Trending-InnerChild {
+  }
+}
+
+/* Customer Reviews */
+@media (max-width: 600px) {
+  .cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    width: 100vw;
+  }
+  #customerReviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+  .Review-Card {
+    width: 90vw;
+    /* gap: 13%; */
+    height: 50vh;
+  }
+  .Discount-Card {
+    width: 90vw;
+    /* gap: 13%; */
+    height: 50vh;
+  }
+  .Discount-Card img {
+    width: 90vw;
+    height: 50vh;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+  }
+}
+@media (max-width: 600px) {
+  .FeaturedBrands {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #QuickLinks,
+  .QuickLinks2 {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .ImageCard {
+    width: 90%;
+  }
+}

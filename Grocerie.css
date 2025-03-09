@@ -1,0 +1,507 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Merriweather Sans";
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+main {
+  height: calc(100vh - 70px);
+}
+/* Nav Styling starts here  */
+#nav {
+  height: 70px;
+  /* background-color: lightcyan; */
+  border-bottom-style: dashed;
+  position: fixed;
+  border-bottom-color: green;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navIcons {
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+.ShoppingSideBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+  padding: 5px;
+  justify-content: space-between;
+  transform: translateX(100%); /*Start off-screen */
+  transition: transform 0.5s ease-in-out;
+}
+.ShoppingSideBar.active {
+  transform: translateX(0); /* Slide into view */
+}
+.ShoppingSideBar a {
+  background-color: white;
+  width: 90%;
+  height: 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  border-style: dashed;
+}
+@media (max-width: 700px) {
+  .ShoppingSideBar {
+    width: 100%;
+  }
+}
+.quickCartProducts {
+  width: 100%;
+  height: 90vh; /* Use vh or a fixed pixel height for clarity */
+}
+
+.quickCartProducts ul {
+  width: 100%;
+  height: 100%;
+  max-height: 100%; /* Allows scrolling within the available height */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adds spacing between list items */
+  overflow-y: auto; /* Enables scrolling */
+}
+
+.quickCartProducts ul li {
+  width: 100%;
+  height: 50px;
+  padding: 10px; /* Replace fixed height with padding for dynamic sizing */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  list-style: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for better visibility */
+}
+.quickCartProducts ul li img {
+  width: 10%;
+  object-fit: contain;
+  height: 40px;
+}
+.CloseCart {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5vw;
+  border-bottom: 1px solid gray;
+  padding: 2%;
+}
+.SideBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+  justify-content: space-evenly;
+  transform: translateX(100%); /* Start off-screen */
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+.SideBar.active {
+  transform: translateX(0); /* Slide into view */
+}
+.SideBar a {
+  text-decoration: none;
+  color: black;
+}
+.Close {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0px 10% 0px;
+  height: 5%;
+}
+.Close i {
+  font-size: 1.6em;
+  color: #0a990a;
+}
+.CompanyLogo {
+  width: 30vw;
+  height: 70px;
+  position: relative;
+  bottom: 10px;
+}
+.navIcons i {
+  font-size: 1em;
+}
+.navIcons a {
+  font-size: 1em;
+
+  text-decoration: none;
+  color: #333;
+}
+.navIcons i,
+h3 {
+  color: green;
+}
+.BurgerIcon {
+  display: none;
+  /* top: 29px; */
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  right: 51px;
+}
+/* Need to fix  */
+.cart-count {
+  background-color: greenyellow;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 50%;
+}
+.CartContainer {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* Nav Responsiveness */
+@media (max-width: 600px) {
+  #nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .navIcons {
+    display: none;
+  }
+  .BurgerIcon {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  .BurgerIcon a i {
+    font-size: 1.6em;
+  }
+}
+
+/* Best Selling */
+.sellingSearching {
+  width: 100vw;
+  height: max-content;
+  display: flex;
+  flex-direction: row-reverse;
+}
+#BestSelling {
+  height: 100%;
+  width: 70%;
+  border-left: 1px solid lightslategray;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#Heading-Image h1 {
+  font-size: 3em;
+}
+
+#Heading-Image {
+  display: flex;
+  width: 100%;
+  z-index: -999;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 100%;
+  align-items: baseline;
+  margin: 0 auto;
+}
+@media (max-width: 700px) {
+  #cardsContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .ImageContent h5,
+  .ImageContent p {
+    font-size: 2.5em !important;
+  }
+}
+.ImageCard {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.ImageCard img {
+  height: 50%;
+  width: 100%;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+  /* display: block; */
+  /* height: auto;*/
+}
+.Stars i {
+  font-size: 1.5em;
+}
+
+.ImageContent {
+  margin: 0;
+  padding: 0;
+  /* min-height: 40%; */
+  /* max-height: max-content; */
+  /* gap: 9%; */
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2vw;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  background-color: beige;
+}
+.ImageContent p {
+  color: grey;
+  font-size: 1.5vw;
+}
+.ImageContent h5 {
+  font-size: 1.5vw;
+}
+.quantity {
+  padding: 10px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+.QuantityBtn {
+  outline: none;
+  border: 1px solid lightgray;
+  border-right: none;
+  border-left: none;
+  height: 40px;
+  border-radius: 5px;
+  width: 20%;
+  transition: background-color 0.2s ease-in-out;
+}
+.QuantityBtn:hover {
+  background-color: rgb(54, 95, 54);
+}
+.QuantityBtn i {
+  color: #04790c; /* Default color */
+}
+.QuantityBtn:hover i {
+  color: white;
+}
+.ShowQuantity {
+  outline: none;
+  border: 1px solid lightgray;
+  border-right: none;
+  border-left: none;
+  text-align: center;
+  height: 40px;
+  width: 20%;
+  
+}
+
+.QuantityBtn {
+  outline: none;
+  border: 1px solid lightgray;
+  border-right: none;
+  border-left: none;
+
+  height: 40px;
+  width: 20%;
+}
+.description {
+  text-align: center;
+}
+.productsContainer {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.productsContainer img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.productsContainer p {
+  color: grey;
+  font-size: 1.3vw;
+}
+/* Search -filer side bar */
+.SearchingFiltering {
+  width: 30%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+  gap: 5%;
+  justify-content: flex-start;
+}
+.inputSearch {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6%;
+  align-items: flex-start;
+  padding: 5%;
+}
+.inputSearch input,
+button {
+  height: 40px;
+  cursor: pointer;
+
+  outline: none;
+}
+#RangeValue {
+  width: 50%;
+}
+#RangeValue1 {
+  width: 50%;
+}
+.add-to-cart {
+  cursor: pointer;
+  background-color: #235823;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  height: 35px;
+  width: 30%;
+  outline: none;
+}
+.inputSearch input {
+  padding: 3px;
+  width: 100%;
+}
+.priceContainer {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: end;
+  align-items: center;
+}
+.priceContainer input {
+  width: 20%;
+  height: 100%;
+}
+#QuickLinks {
+  height: auto;
+  width: 100vw;
+  background-color: black;
+  color: gray;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  position: relative;
+  justify-items: center;
+  padding: 20px;
+}
+#QuickLinks p {
+  font-size: 20px;
+}
+#QuickLinks h1 {
+  color: white;
+  font-size: 30px;
+}
+.QuickLinks2 h1,
+.QuickLinks2 p {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 10px;
+}
+.Quick h1,
+.Quick p {
+  margin: 20px;
+}
+#SocialMedia {
+  border-top: 2px solid gray;
+  padding: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+  color: gray;
+  background-color: black;
+  min-height: 20vh;
+  margin: 0;
+}
+#SocialMedia a i {
+  color: white;
+  width: 20px;
+  height: 30px;
+}
+.icon-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  #QuickLinks,
+  .QuickLinks2 {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .ImageCard {
+    width: 90%;
+  }
+}

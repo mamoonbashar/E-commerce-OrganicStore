@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="Grocerie.css" />
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  
+
+    <title>About</title>
+  </head>
+  <body>
+   <header class="section-Header">
+      <script type="module" src="src/Header.js"></script>
+    </header>
+    <!-- Shop Now -->
+    <main>
+      <section class="sellingSearching">
+        <section id="BestSelling">
+          <div id="Heading-Image">
+            <h1>Best Selling Products</h1>
+            <img src="assets/logo-leaf-new.png" alt="Logo" />
+          </div>
+          <div id="cardsContainer">
+            <template class="templateCard">
+              <div class="ImageCard">
+                <img class="imageUrl" src="" alt="Logo" />
+                <div class="ImageContent">
+                  <p class="category"></p>
+                  <section class="Stars">
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                  </section>
+                  <h5 class="name"></h5>
+                  <h5 class="price">$15.0</h5>
+                  <p class="description">why</p>
+                  <button class="add-to-cart"><i class="ri-shopping-cart-line"></i>Add to Cart</button>
+                </div>
+              </div>
+            </template>
+          </div>
+     
+        </section>
+        <!-- Searching and filtering -->
+        <section class="SearchingFiltering">
+          <section class="inputSearch">
+            <section>
+              <input class="Search" type="text" />
+              <button class="buttonElement">Search</button>
+                <div class="error-message" style="color: red; margin-top: 10px; display: none;"></div>
+            </section>
+            <h1>Filter By Price</h1>
+            <input type="range" class="Range" min="0" max="100" step="2"/>
+            <section class="priceContainer">
+              <input id="RangeValue"  type="number" placeholder="0$"  />
+              <input  id="RangeValue1" placeholder="0$"  type="number" />
+            </section>
+          </section>
+          
+          <template class="templateCard">
+              <div class="ImageCard">
+                <img class="imageUrl" src="" alt="Logo" />
+                <div class="ImageContent">
+                  <p class="category"></p>
+                  <section class="Stars">
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                  </section>
+                  <h5 class="name">  </h5>
+                  <h5 class="price">$15.0</h5>
+                  <p class="description">why</p>
+                </div>
+              </div>
+            </template>
+        </section>
+      </section>
+        <Footer class="section-Footer">
+     <script type="module" src="./src/footer.js"> </script>
+      </Footer>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/5e42a819a3.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script type="module" src="src/main.js"></script> -->
+    <!-- <script type="module" src="src/Everything.js"></script> -->
+    <script type="module" src="src/Home.js"></script>
+    <script type="module" src="src/Grocerie.js"></script>
+  
+  </body>
+</html>

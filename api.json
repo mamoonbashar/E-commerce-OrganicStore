@@ -1,0 +1,482 @@
+[
+  {
+    "id": 1,
+    "title": "Organic Apples",
+    "category": "Fruits",
+    "price": 4.99,
+    "description": "This is the Product Description",
+    "imageUrl": "https://www.orgpick.com/cdn/shop/articles/Apple_1024x1024.jpg?v=1547124407"
+  },
+  {
+    "id": 2,
+    "title": "Organic Bananas",
+    "category": "Fruits",
+    "price": 2.99,
+    "description": "This is the Product Description",
+    "imageUrl": "https://www.orgpick.com/cdn/shop/products/banana-powder_large_f0d6750f-b412-4815-b1e1-7779bf18c354.jpg?v=1612510545"
+  },
+  {
+    "id": 3,
+    "title": "Organic Carrots",
+    "category": "Vegetables",
+    "price": 3.49,
+    "description": "This is the Product Description",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQfzFBNXBacFEOb2G_jfuVxRtKQOCro0vrwA&s"
+  },
+  {
+    "id": 4,
+    "title": "Organic Spinach",
+    "category": "Vegetables",
+    "price": 2.99,
+    "description": "This is the Product Description",
+    "imageUrl": "https://www.greendna.in/cdn/shop/files/palak2_1200x1200.jpg?v=1715600291"
+  },
+  {
+    "id": 5,
+    "title": "Organic Almonds",
+    "category": "Dry Fruits",
+    "price": 12.99,
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1mzBofcQqrtKoyVNHhk_YjIypCkc_znvqVw&s",
+    "description": "This is the Product Description"
+  },
+  {
+    "id": 6,
+    "title": "Organic Milk",
+    "category": "Dairy",
+    "price": 5.49,
+    "description": "This is the Product Description",
+    "imageUrl": "https://static.toiimg.com/photo/108036977.cms"
+  },
+  {
+    "id": 7,
+    "title": "Organic Eggs",
+    "category": "Dairy",
+    "price": 4.99,
+    "description": "This is the Product Description",
+    "imageUrl": "https://freshmills.in/cdn/shop/files/organic-country-eggs-akshayakalpa-freshmills-378912.jpg?v=1723751240&wth=1300"
+  },
+  {
+    "id": 8,
+    "title": "Organic Bread",
+    "category": "Grains",
+    "price": 3.99,
+    "description": "This is the Product Description",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4fu2QijfQH8DQ8-1QcWPgTTAEIjgPW3PivA&s"
+  },
+  {
+    "id": 9,
+    "title": "Organic Rice",
+    "category": "Grains",
+    "price": 6.99,
+    "description": "This is the Product Description",
+    "imageUrl": "https://m.media-amazon.com/images/I/51AqSCT7kJL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Organic Olive Oil",
+    "category": "Oils",
+    "price": 9.99,
+    "description": "This is the Product Description",
+    "imageUrl": "https://jayporeolives.com/cdn/shop/files/IMG_7096_1080x.jpg?v=1733986533"
+  },
+  {
+    "id": 11,
+    "title": "Organic Honey",
+    "category": "Condiments",
+    "price": 8.99,
+    "description": "This is the Product Description",
+    "imageUrl": "https://shivaorganic.com/cdn/shop/files/IMG_5503.png?v=1716519523&wth=1500"
+  },
+  {
+    "id": 12,
+    "title": "Organic Strawberries",
+    "category": "Fruits",
+    "price": 5.99,
+    "description": "This is the Product Description",
+    "imageUrl": "https://freshindiaorganics.com/cdn/shop/files/Untitleddesign_14_12eef1de-8530-4b24-bd2e-668f871e6721.png?v=1701772054"
+  },
+  {
+    "id": 13,
+    "title": "Organic Blueberries",
+    "category": "Fruits",
+    "price": 6.99,
+    "description": "This is the Product Description",
+    "imageUrl": "https://www.bigbasket.com/media/uploads/p/xxl/30009286_12-fresho-blueberry.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Organic Kale",
+    "category": "Vegetables",
+    "price": 3.49,
+    "description": "This is the Product Description",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGWJpIF3uCpfJUfy48BL8U8NfoT_FzWRgEBw&s"
+  },
+  {
+    "id": 15,
+    "title": "Organic Broccoli",
+    "category": "Vegetables",
+    "price": 3.99,
+    "description": "This is the Product Description",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy5AU7TbtteBgdFvsVIqnBWmGHFOM6bZBTZw&s"
+  },
+  {
+    "id": 16,
+    "title": "Organic Coconut Water",
+    "category": "Beverages",
+    "price": 3.49,
+    "description": "This is the Product Description",
+    "imageUrl": "https://livpure.com/cdn/shop/articles/List-of-Factors-to-Take-Into-Account-When-Buying-a-Water-Purifier-1_ae2cdd8e-3819-4900-8ac6-7b4d2875d1f2-140364.png?v=1726726186"
+  },
+  {
+    "id": 17,
+    "title": "Organic Oranges",
+    "category": "Fruits",
+    "price": 4.49,
+    "description": "This is the Product Description",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmZ6P15vEr9dIHCJJeOfaOaljnpuOyhS5Stw&s"
+  },
+  {
+    "id": 18,
+    "title": "Organic Grapes",
+    "category": "Fruits",
+    "price": 4.99,
+    "description": "This is the Product Description",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyRcox6fGtfWKmeRI4RQIxJ0jISzFnKXZyQ&s"
+  },
+  {
+    "id": 19,
+    "title": "Organic Potatoes",
+    "category": "Vegetables",
+    "price": 2.49,
+    "description": "This is the Product Description",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAB5UCDPJJtgFA_U4ngGBvX9lbMPLZPlIaKg&s"
+  },
+  {
+    "id": 20,
+    "title": "Organic Tomato",
+    "category": "Vegetables",
+    "price": 2.99,
+    "description": "This is the Product Description",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2b6zsKQYhft2iCHFwCOTor2ljhL07I6LLmg&s"
+  },
+  {
+    "id": 21,
+    "title": "Organic Lemon",
+    "category": "Fruits",
+    "price": 3.49,
+    "description": "This is the Product Description",
+    "imageUrl": "https://www.bigbasket.com/media/uploads/p/xxl/30004155_4-organic-lemon.jpg"
+  },
+  {
+    "id": 22,
+    "title": "Organic Avocado",
+    "category": "Fruits",
+    "price": 2.99,
+    "description": "This is the Product Description",
+    "imageUrl": "https://m.media-amazon.com/images/I/51fUU3n6gxL._SX300_SY300_QL70_FMwebp_.jpg"
+  },
+  {
+    "id": 23,
+    "title": "Organic Almonds",
+    "category": "Dry Fruits",
+    "price": 15.99,
+    "description": "High-quality organic almonds sourced from sustainable farms.",
+    "imageUrl": "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/skxreabtjgilf5rjxplr"
+  },
+  {
+    "id": 24,
+    "title": "Organic Quinoa",
+    "category": "Grains",
+    "price": 9.99,
+    "description": "Certified organic quinoa, perfect for healthy meals.",
+    "imageUrl": "https://www.jiwa.in/cdn/shop/products/YUc_JIWA_quinoa_PROSHOT_mar_2021_a.jpg?v=1659934852"
+  },
+  {
+    "id": 25,
+    "title": "Organic Avocado Oil",
+    "category": "Cooking Oils",
+    "price": 12.49,
+    "description": "Cold-pressed organic avocado oil for cooking and dressing.",
+    "imageUrl": "https://frugivore-bucket.s3.amazonaws.com/media/package/img_one/2023-07-26/Avocado_500ML.jpg"
+  },
+  {
+    "id": 26,
+    "title": "Organic Green Tea",
+    "category": "Beverages",
+    "price": 7.99,
+    "description": "Premium organic green tea leaves for a refreshing experience.",
+    "imageUrl": "https://www.tearaja.in/cdn/shop/products/organic-green-tea-30-teabags-tearaja-7_800x.jpg?v=1704913000"
+  },
+  {
+    "id": 27,
+    "title": "Organic Honey",
+    "category": "Sweeteners",
+    "price": 10.5,
+    "description": "Pure organic honey with no added preservatives.",
+    "imageUrl": "https://m.media-amazon.com/images/I/610k-UsImNL.jpg"
+  },
+  {
+    "id": 28,
+    "title": "Whole Milk",
+    "price": "4.29",
+    "imageUrl": "https://horizon.com/wp-content/uploads/horizon-organic-whole-milk-lockup-v3-.png",
+    "category": "Dairy",
+    "description": "Rich and creamy whole milk."
+  },
+  {
+    "id": 29,
+    "title": "Brown Bread",
+    "price": "3.99",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgkeYnkvGnkSzX16RireD06ZhVdjT1EZ6FUg&s",
+    "category": "Bakery",
+    "description": "Whole grain brown bread."
+  },
+  {
+    "id": 30,
+    "title": "Chicken Breasts",
+    "price": "7.99",
+    "imageUrl": "https://www.greenchickchop.in/cdn/shop/files/ChickenBreastBoneless.webp?v=1682572347",
+    "category": "Meat",
+    "description": "Boneless and skinless chicken breasts."
+  },
+  {
+    "id": 31,
+    "title": "Cheddar Cheese",
+    "price": "5.99",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQEyzYGOrBibs0takaRPlwFMhKt3lrPg7iKy7ubbSv1zxI3XB9yhmFD0RHNDkunYDevf9feujFTk0auHI0FKiMoE5RG_FhsQ6z50mbGEZKsaLVrvVsSpC4cOg",
+    "category": "Dairy",
+    "description": "Sharp cheddar cheese."
+  },
+  {
+    "id": 32,
+    "title": "Butter",
+    "price": "4.49",
+    "imageUrl": "https://mishry.com/wp-content/uploads/2021/03/best-butter-brand-11.jpg",
+    "category": "Dairy",
+    "description": "Creamy salted butter."
+  },
+  {
+    "id": 33,
+    "title": "Greek Yogurt",
+    "price": "1.99",
+    "imageUrl": "https://m.media-amazon.com/images/I/51FGF8WTq1L._AC_UF1000,1000_QL80_.jpg",
+    "category": "Dairy",
+    "description": "Thick and creamy Greek yogurt."
+  },
+  {
+    "id": 34,
+    "title": "Eggs",
+    "price": "3.29/dozen",
+    "imageUrl": "https://media.post.rvohealth.io/wp-content/uploads/2020/09/health-benefits-of-eggs-732x549-thumbnail-732x549.jpg",
+    "category": "Dairy",
+    "description": "Large cage-free eggs."
+  },
+  {
+    "id": 35,
+    "title": "Orange Juice",
+    "price": "5.49",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT78_eas4bKLWbtP8bH2ryrD43hW63IIo_PGQ&s",
+    "category": "Beverages",
+    "description": "Freshly squeezed orange juice."
+  },
+  {
+    "id": 36,
+    "title": "Pasta",
+    "price": "1.99",
+    "imageUrl": "https://images.101cookbooks.com/winter-penne-pasta-h.jpg?w=1200&auto=format",
+    "category": "Grains",
+    "description": "Durum wheat spaghetti pasta."
+  },
+  {
+    "id": 37,
+    "title": "Coffee",
+    "price": "9.99",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Roasted_coffee_beans.jpg/800px-Roasted_coffee_beans.jpg",
+    "category": "Beverages",
+    "description": "Rich and aromatic ground coffee."
+  },
+  {
+    "id": 38,
+    "title": "Green Tea",
+    "price": "3.49",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXWybuCrXGDMnDn3siQr9CQ_JHE2kY1NIwUw&s",
+    "category": "Beverages",
+    "description": "Refreshing green tea."
+  },
+  {
+    "id": 39,
+    "title": "Peanut Butter",
+    "price": "5.99",
+    "imageUrl": "https://pintola.in/cdn/shop/files/High_Protein_Dark_Chocolate_Creamy_510gm_600x600_91a76cb0-82ad-42f8-9bba-76e70e27814e_600x.jpg?v=1732089742",
+    "category": "Condiments",
+    "description": "Creamy peanut butter."
+  },
+  {
+    "id": 40,
+    "title": "Salt",
+    "price": "1.49",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWQGhUHH4uiwSDMhToXj33z0qpcp4CS14gug&s",
+    "category": "Pantry",
+    "description": "Fine-grain table salt."
+  },
+  {
+    "id": 41,
+    "title": "Pepper",
+    "price": "2.49",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_GJaUawqQShm9hGcNKzx0VV__TrLQLKkIig&s",
+    "category": "Pantry",
+    "description": "Freshly ground black pepper."
+  },
+  {
+    "id": 42,
+    "title": "Brown Bread",
+    "price": "3.99",
+    "imageUrl": "https://m.media-amazon.com/images/I/71UbYicb3qL._AC_UF1000,1000_QL80_.jpg",
+    "category": "Bakery",
+    "description": "Whole grain brown bread."
+  },
+  {
+    "id": 43,
+    "title": "Apple Juice",
+    "price": "2.99",
+    "imageUrl": "https://tonsvalley.shop/wp-content/uploads/2024/08/apple-juice-1-L.jpg",
+    "category": "Beverages",
+    "description": "100% pure apple juice, no added sugar."
+  },
+  {
+    "id": 44,
+    "title": "Grape Juice",
+    "price": "3.79",
+    "imageUrl": " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzYbSfRLG3R_xF_BC0SYLrNwvwmjZC5w4EFg&s",
+    "category": "Beverages",
+    "description": "Delicious purple grape juice, full of antioxants."
+  },
+  {
+    "id": 45,
+    "title": "Pineapple Juice",
+    "price": "4.49",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDYowyKdz46-48BowfZ-lxhZPfPeaE2V0s-g&s",
+    "category": "Beverages",
+    "description": "Tropical pineapple juice, naturally sweet and refreshing."
+  },
+  {
+    "id": 46,
+    "title": "Cranberry Juice",
+    "price": "4.99",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-apvZSTeSxkQ7uh8dDQdL28Y7_j-2JZivxw&s",
+    "category": "Beverages",
+    "description": "Tangy cranberry juice, great for hydration and wellness."
+  },
+  {
+    "id": 47,
+    "title": "Mango Juice",
+    "price": "3.99",
+    "imageUrl": "https://theobroma.in/cdn/shop/files/10MangoJuice3_grande.jpg?v=1710923246",
+    "category": "Beverages",
+    "description": "Smooth mango juice, packed with tropical flavor."
+  },
+  {
+    "id": 48,
+    "title": "Lemonade",
+    "price": "2.99",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3CxYonC8qV5pNC6NDv66GJu7zocUkRnPCyw&s",
+    "category": "Beverages",
+    "description": "Classic lemonade, a perfect balance of sweet and tangy."
+  },
+  {
+    "id": 49,
+    "title": "Strawberry Juice",
+    "price": "3.89",
+    "imageUrl": "https://images-cdn.ubuy.co.in/660eed76eac2680237592afa-great-value-white-cranberry-strawberry.jpg",
+    "category": "Beverages",
+    "description": "Refreshing strawberry juice, made with real fruit."
+  },
+  {
+    "id": 50,
+    "title": "Pomegranate Juice",
+    "price": "5.49",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv_4OoVeHnAbR7hIWRJF8YXH_MnZzX7Hz0Xw&s",
+    "category": "Beverages",
+    "description": "Rich pomegranate juice, a superfood in every sip."
+  },
+  {
+    "id": 51,
+    "title": "Mixed Berry Juice",
+    "price": "4.29",
+    "imageUrl": "https://www.luluhypermarket.com/medias/sys_master/images/images/h5f/he6/9071682191390/Al-Marai-Mixed-Berry-Juice-1.jpg",
+    "category": "Beverages",
+    "description": "A blend of strawberries, blueberries, and raspberries."
+  },
+  {
+    "id": 52,
+    "title": "Red Lentils (Masoor Dal)",
+    "price": "1.99",
+    "imageUrl": "https://pickyeaterblog.com/wp-content/uploads/2023/11/how-to-cook-red-lentils.jpg",
+    "category": "Pulses",
+    "description": "Protein-packed red lentils, perfect for soups and stews."
+  },
+  {
+    "id": 53,
+    "title": "Chickpeas (Kabuli Chana)",
+    "price": "2.49",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-seN-LdyhkMcPrz_9H7l0vL-zd-V0_96lmA&s",
+    "category": "Pulses",
+    "description": "Nutritious chickpeas, eal for curries and salads."
+  },
+  {
+    "id": 54,
+    "title": "Black Gram (Urad Dal)",
+    "price": "2.29",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIbW0J5ZvExi8MUe8dGRlc3a8FOEwHpguP8w&s",
+    "category": "Pulses",
+    "description": "Rich and creamy black gram, often used in dal makhani."
+  },
+  {
+    "id": 55,
+    "title": "Green Gram (Moong Dal)",
+    "price": "1.89",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR-DEnwZwCUEOe9CMil0PVfYprRRy1pDzT5Q&s",
+    "category": "Pulses",
+    "description": "Healthy green gram, great for sprouts and light dishes."
+  },
+  {
+    "id": 56,
+    "title": "Split Pigeon Peas (Toor Dal)",
+    "price": "2.99",
+    "imageUrl": "https://www.tatanutrikorner.com/cdn/shop/files/Tata-Sampann-Toor-Arhar-Dal--500g-_FOP_-with-Sanjeev-kapoor_3960b5d3-ae9e-4b2e-899b-8fa312fef7e4.png?v=1731513586&wth=1946",
+    "category": "Pulses",
+    "description": "Staple Indian pulse, essential for dal tadka."
+  },
+  {
+    "id": 57,
+    "title": "Cashews",
+    "price": "9.49",
+    "imageUrl": "https://m.media-amazon.com/images/I/814ZCJUd7ZL._SX679_.jpg",
+    "category": "Dry Fruits",
+    "description": "Creamy and delicious cashews, great for cooking and desserts."
+  },
+  {
+    "id": 58,
+    "title": "Raisins",
+    "price": "4.99",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYEt4vNYxP3LBBlLJddk_2CRrRVyTuwhXvEw&s",
+    "category": "Dry Fruits",
+    "description": "Naturally sweet raisins, perfect for baking and snacking."
+  },
+  {
+    "id": 59,
+    "title": "Walnuts",
+    "price": "12.99",
+    "imageUrl": "https://www.twopeasandtheirpod.com/wp-content/uploads/2019/10/Candied-Walnuts-6-500x500.jpg",
+    "category": "Dry Fruits",
+    "description": "Heart-healthy walnuts, packed with omega-3 fatty ac"
+  },
+  {
+    "id": 60,
+    "title": "Pistachios",
+    "price": "10.49",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0vwthqXlNkHCMwQidP8VPT_dukh-Vh4znwA&s",
+    "category": "Dry Fruits",
+    "description": "Lightly salted pistachios, perfect for savory snacks."
+  }
+]

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="section-Header">
+      <script type="module" src="src/Header.js"></script>
+    </header>
+
+    <main>
+      <section class="OrderInfo">
+        <h1>Cart</h1>
+        <section class="tableContent">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total Products Price</th>
+              </tr>
+            </thead>
+            <tbody class="tableRowBody">
+              <!-- Rows will dynamically be appended here -->
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5">Sub total</td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <!-- Template for dynamic rows -->
+          <template class="templateCloneCard">
+            <tr>
+              <td>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  fill="darkgreen"
+                   id="deleteBtn"
+                  style=" cursor: pointer; "
+                >
+                  <path
+                    d="M7 4V2H17V4H22V6H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V6H2V4H7ZM6 6V20H18V6H6ZM9 9H11V17H9V9ZM13 9H15V17H13V9Z"
+                  ></path>
+                </svg>
+               
+              </td>
+              <td>
+                <img
+                  class="imageUrl"
+                  src="./assets/coffee-asorted-400x400.jpg"
+                  alt="logo"
+                />
+              </td>
+              <td class="title"></td>
+              <td class="price"></td>
+              <td class="quantity">
+                <button id="increaseQuantity" class="QuantityBtn">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+                <input type="text" value="1" class="ShowQuantity" />
+                <button id="decreaseQuantity" class="QuantityBtn">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+              </td>
+              <td class="totalProductPrice"></td>
+            </tr>
+          </template>
+        </section>
+        <!-- checkout form detail -->
+        <div class="ProceedForm">
+          <div class="OrderDetails">
+            <h1>Cart Total</h1>
+            <p>Rs:100</p>
+          </div>
+          <div class="OrderDetails">
+            <h1>Total</h1>
+            <p>Rs:100</p>
+          </div>
+          <div class="OrderDetails">
+            <i class="fa-solid fa-truck" style="color: #000000"></i>
+            <button class="Checkout">Proceed To Checkout</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="section-Footer">
+        <script type="module" src="./src/footer.js"></script>
+      </footer>
+    </main>
+    <!-- <div id="cardsContainer">
+            <template class="templateCard">
+              <div class="ImageCard">
+                <img class="imageUrl" src="" alt="Logo" />
+                <div class="ImageContent">
+                  <p class="category"></p>
+                  <section class="Stars">
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                  </section>
+                  <h5 class="name"></h5>
+                  <h5 class="price">$15.0</h5>
+                  <p class="description">why</p>
+                  <button class="add-to-cart"><i class="ri-shopping-cart-line"></i>Add to Cart</button>
+                </div>
+              </div>
+            </template>
+          </div> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="module" src="./src/QuantityControl.js"></script>
+    <script type="module" src="./src/ShowCartProducts.js"></script>
+  </body>
+</html>

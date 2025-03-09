@@ -1,0 +1,433 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
+}
+/* Nav Styling starts here  */
+#nav {
+  height: 70px;
+  /* background-color: lightcyan; */
+  border-bottom-style: dashed;
+  border-bottom-color: green;
+  width: 100%;
+  position: sticky;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navIcons {
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+.SideBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+  justify-content: space-evenly;
+}
+.SideBar a {
+  text-decoration: none;
+  color: black;
+}
+.Close {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0px 10% 0px;
+  height: 5%;
+}
+.Close i {
+  font-size: 1.6em;
+  color: #0a990a;
+}
+.CompanyLogo {
+  width: 30vw;
+  height: 70px;
+  position: relative;
+  bottom: 10px;
+}
+.navIcons i {
+  font-size: 1em;
+}
+.navIcons a {
+  font-size: 1em;
+
+  text-decoration: none;
+  color: #333;
+}
+.navIcons i,
+h3 {
+  color: green;
+}
+.BurgerIcon {
+  display: none;
+  /* top: 29px; */
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  right: 51px;
+}
+/* Need to fix  */
+.cart-count {
+  background-color: greenyellow;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 50%;
+}
+.CartContainer {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* Nav Responsiveness */
+@media (max-width: 600px) {
+  #nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .navIcons {
+    display: none;
+  }
+  .BurgerIcon {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  .BurgerIcon a i {
+    font-size: 1.6em;
+  }
+}
+/* Nav Styling ends here  */
+
+/* Banner Starts here */
+
+/* need fixing  */
+main {
+  height: calc(100vh - 70px);
+  width: 100vw;
+}
+
+/* container Styling */
+.container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5%;
+  /* border-bottom: 1px solid grey; */
+  padding: 1%;
+}
+.icon-container {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+.productImage {
+  height: 90%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.productImage img {
+  position: relative;
+
+  width: 100%;
+  object-fit: contain;
+}
+.productImage i {
+  /* position: absolute; */
+
+  width: 36px;
+  height: 36px;
+}
+.productDesc {
+  height: 70%;
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+.ImageContent {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+.ImageContent h1 {
+  font-size: 2rem;
+  color: grey;
+}
+.ImageContent h3,
+p {
+  font-size: 2rem;
+  text-align: justify;
+}
+.Qty-btn {
+  height: 40%;
+  width: 100%;
+  border-bottom: 2px solid lightgrey;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 3%;
+}
+.Qty-btn button {
+  max-height: max-content;
+  min-height: 60px;
+  max-width: 35%;
+  min-width: 25%;
+  gap: 1%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  position: relative;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(88, 146, 1);
+  align-items: center;
+}
+.Qty-btn input {
+  max-height: max-content;
+  min-height: 60px;
+  max-width: 5%;
+  min-width: 10%;
+  text-align: center;
+  font-size: 2em;
+  color: grey;
+  padding: 5px;
+}
+
+.description-reviews {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  gap: 10px;
+  /* border-top: 1px solid darkgray; */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.customer-product {
+  border-top: 5px solid green;
+  /* width: 10em; */
+}
+.customer-product ul {
+  height: 50px;
+}
+@media (max-width: 700px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+  }
+  .productImage {
+    width: 100%;
+    height: 50%;
+    position: relative;
+  }
+  .productDesc {
+    width: 100%;
+  }
+  .Qty-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .Qty-btn input {
+    max-width: 20%;
+    min-width: 10%;
+  }
+}
+/* 
+Customer Reviews Designing */
+.ParentForm {
+  width: 100%;
+  height: fit-content;
+}
+.FormContainer {
+  border: 1px solid gray;
+  width: 90%;
+  height: fit-content;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input:nth-of-type(1) {
+  width: 90%;
+  outline: none;
+  height: 50px;
+  border: 1px solid lightgray;
+  /* box-sizing: border-box; */
+  background: beige;
+}
+input:nth-of-type(2) {
+  width: 50%;
+  outline: none;
+  height: 50px;
+  border: 1px solid lightgray;
+  /* box-sizing: border-box; */
+  background: beige;
+}
+input:nth-of-type(3) {
+  width: 50%;
+  outline: none;
+  height: 50px;
+  border: 1px solid lightgray;
+  /* box-sizing: border-box; */
+  background: beige;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 16px; /* Set your desired width */
+  height: 16px; /* Set your desired height */
+  margin-right: 5px; /* Optional: add space between checkbox and label */
+  /* Remove default margin, padding or border that might cause spacing issues */
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.checkbox-container label {
+  margin: 0;
+  padding: 0;
+  font-size: 1em; /* Adjust font size as needed */
+}
+.ShopNow {
+  max-height: max-content;
+  min-height: 60px;
+  max-width: 35%;
+  min-width: 25%;
+  gap: 1%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  position: relative;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(88, 146, 1);
+  align-items: center;
+}
+/* Review Form Responsiveness */
+@media (max-width:700px) {
+  .FormContainer{
+    
+  }
+}
+#QuickLinks {
+  height: auto;
+  width: 100vw;
+  background-color: black;
+  color: gray;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  position: relative;
+  justify-items: center;
+  padding: 20px;
+}
+#QuickLinks p {
+  font-size: 20px;
+}
+#QuickLinks h1 {
+  color: white;
+  font-size: 30px;
+}
+.QuickLinks2 h1,
+.QuickLinks2 p {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 10px;
+}
+.Quick h1,
+.Quick p {
+  margin: 20px;
+}
+#SocialMedia {
+  border-top: 2px solid gray;
+  padding: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+  color: gray;
+  background-color: black;
+  min-height: 20vh;
+  margin: 0;
+}
+#SocialMedia a i {
+  color: white;
+  width: 20px;
+  height: 30px;
+}
+.icon-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  
+  #QuickLinks,
+  .QuickLinks2 {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .ImageCard {
+    width: 90%;
+  }
+}
