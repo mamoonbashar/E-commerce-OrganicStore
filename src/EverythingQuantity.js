@@ -25,8 +25,9 @@ export const increamentQuantity = (event, id) => {
     // console.log("this is class", event.target.className);
     // console.log(quantity)
   }
-  if (event.target.className === "QuantityBtn  decreament") {
+  if (event.target.className === "QuantityBtn decreament") {
     quantity -= 1;
+    console.log('this')
   }
   if (quantity <= 0) {
     return 0;
