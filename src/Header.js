@@ -8,6 +8,7 @@ const headerHtml = `     <nav id="nav">
         <a href='Everything.html'>Everything</a>
           <a href="Grocerie.html">Groceries</a>
           <a href="Juice.html">Juice</a>
+          
         </ul>
 
         <ul class="navIcons">
@@ -52,11 +53,11 @@ const headerHtml = `     <nav id="nav">
           <span class="Close">
             <i class="fa-solid fa-xmark"></i>
           </span>
-          <a href="Everyhting.html">Everything</a>
+          <a href="Everything.html">Everything</a>
           <a href="Grocerie.html">Groceries</a>
           <a href="Juice.html">Juice</a>
           <a href="About.html">About</a>
-          <a>Contact</a>
+          <a href="contact.html">Contact</a>
           <a>Rs. 0.00</a>
         </ul>
       </nav>`;

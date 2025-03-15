@@ -9,6 +9,7 @@ const imageCard = document.querySelectorAll(".ImageCard");
 const buttonElement = document.querySelector(".buttonElement");
 const ParentCard = document.querySelector(".templateCard");
 const cardsContainer = document.querySelector("#cardsContainer"); // Visible container
+const SnackBar=document.querySelector('.snackBar');
 
 export const showEverythingPage = (products) => {
   if (!products) {
@@ -29,10 +30,18 @@ export const showEverythingPage = (products) => {
     const cardElement = productsClone.querySelector(".ImageCard");
     cardElement.classList.add(`card${id}`);
     // console.log("this is the id aded when click on add to cart ", cardElement);
+   
     productsClone
       .querySelector(".add-to-cart")
       .addEventListener("click", () => {
         addToCart(id, Quantity);
+        // Show snackbar
+        SnackBar.classList.add("show");
+
+        // Hide snackbar after 3 seconds
+        setTimeout(() => {
+          SnackBar.classList.remove("show");
+        }, 800);
       });
 
     // setting  Id
@@ -135,10 +144,10 @@ function updateCart() {
   Number((cartValue.innerText = arrLocalStorage.length));
 }
 updateCart();
-
 document.querySelectorAll(".add-to-cart").forEach((button) => {
   button.addEventListener("click", function () {
     updateCart();
+    console.log("this cart Quantity length", button);
   });
 });
 // Quick Product Card
@@ -151,10 +160,12 @@ const renderQuickProducts = () => {
   filterProducts.forEach((curProduct) => {
     let { id, name, price, imageUrl } = curProduct;
     // console.log("these are local storage products", curProduct);
+
     const QuickProductClone = document.importNode(
       QuickPorductsTemplate.content,
       true
     );
+
     QuickProductClone.querySelector(".productName").innerText = name;
     QuickProductClone.querySelector(".productCardImage").src = imageUrl;
 
@@ -165,6 +176,7 @@ const renderQuickProducts = () => {
         // console.log(removeItem, "list items");
         removeItem.classList.add(`list${id}`);
         sideCart(id);
+        updateCart();
       }
     );
 

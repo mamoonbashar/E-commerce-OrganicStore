@@ -6,6 +6,7 @@ import { removeProductFromCart } from "./removeProduct";
 import { perProductPrice } from "./totalPerProductPrice";
 const tableContent = document.querySelector(".tableRowBody");
 const templateCard = document.querySelector(".templateCloneCard");
+const smallScreenTemplate = document.querySelector(".templateSmallScreen");
 
 let filterProducts = products.filter((curProd) => {
   let cartProdcuts = getCartProductFromLS();
@@ -62,7 +63,6 @@ const ShowCartProduct = () => {
     let showTotal = productsClone.querySelectorAll(".totalProductPrice");
 
     showTotal.forEach((TotalProductPriceElements) => {
-      // console.log('chalo yrr',chalbheeja)
       TotalProductPriceElements.setAttribute("id", `NewTotalProductPrice${id}`);
     });
 
@@ -77,10 +77,61 @@ const ShowCartProduct = () => {
     // grandTotal(id);
     //  grandTotal()
 
+    // Small Screen dynamic Products
+    let smallScreenClone = document.importNode(
+      smallScreenTemplate.content,
+      true
+    );
+
+    smallScreenClone.querySelector(".imageUrl").src = imageUrl;
+    smallScreenClone.querySelector(".title").innerText = title;
+    smallScreenClone.querySelector(".ShowQuantity").value =
+      LSactualData.quantity;
+    Number(
+      (smallScreenClone.querySelector(".price").innerText = LSactualData.price)
+    );
+    let smallShowTotal =
+      smallScreenClone.querySelectorAll(".totalProductPrice");
+    smallShowTotal.forEach((TotalProductPriceElements) => {
+      TotalProductPriceElements.setAttribute(
+        "id",
+        `SmallNewTotalProductPrice${id}`
+      );
+    });
+    smallScreenClone
+      .querySelector(".quantity")
+      .setAttribute("id", `SmallScreenProduct${id}`);
+    smallScreenClone
+      .querySelector(".quantity")
+      .addEventListener("click", (event) => {
+        increamentQuantity(id, event, priceofThis, smallShowTotal);
+      });
+    smallScreenClone
+      .querySelector(".smallScreenProduct")
+      .setAttribute("id", `smallscreen${id}`);
+
+    smallScreenClone
+      .querySelector("#deleteBtn")
+      .addEventListener("click", () => {
+        removeProductFromCart(id);
+      });
+
+    document.querySelector(".smallScreen").appendChild(smallScreenClone);
     tableContent.appendChild(productsClone);
+
     showTotal.forEach((Prod) => {
       // console.log("%%%", Prod);
-      let PerProductTotal = priceofThis * LSactualData.quantity;
+      let PerProductTotal = parseFloat(
+        priceofThis * LSactualData.quantity
+      ).toFixed(2);
+      Prod.innerText = `\u20B9${PerProductTotal}`;
+      //console.log("this is the complete Value", PerProductTotal);
+    });
+    smallShowTotal.forEach((Prod) => {
+      // console.log("%%%", Prod);
+      let PerProductTotal = parseFloat(
+        priceofThis * LSactualData.quantity
+      ).toFixed(2);
       Prod.innerText = `\u20B9${PerProductTotal}`;
       //console.log("this is the complete Value", PerProductTotal);
     });
@@ -88,6 +139,16 @@ const ShowCartProduct = () => {
     perProductPrice(id);
   });
 };
+// Changing Route to  SignUp Form
+const selectTruck = document.querySelector("svg");
+
+document.querySelector(".Checkout").addEventListener("click", truckTransiton);
+function truckTransiton() {
+  selectTruck.style.animationName = "truck";
+  setTimeout(() => {
+    window.location.href = "/CheckoutForm.html";
+  }, 2000);
+}
 
 // console.log(filterProducts);
 

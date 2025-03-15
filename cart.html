@@ -19,7 +19,7 @@
       <section class="OrderInfo">
         <h1>Cart</h1>
         <section class="tableContent">
-          <table>
+          <table class="largeScreen">
             <thead>
               <tr>
                 <th></th>
@@ -31,7 +31,7 @@
               </tr>
             </thead>
             <tbody class="tableRowBody">
-              <!-- Rows will dynamically be appended here -->
+              <!-- Rows will dynamically be appended here  -->
             </tbody>
             <tfoot>
               <tr>
@@ -39,6 +39,58 @@
               </tr>
             </tfoot>
           </table>
+
+          <table class="smallScreen"></table>
+          <template class="templateSmallScreen">
+            <table class="smallScreenProduct">
+              <tr>
+                <td colspan="2" class="image-cell">
+                  <img class="imageUrl" alt="Product Image" />
+                </td>
+                <td class="close-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="darkgreen"
+                    id="deleteBtn"
+                    style="cursor: pointer"
+                  >
+                    <path
+                      d="M7 4V2H17V4H22V6H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V6H2V4H7ZM6 6V20H18V6H6ZM9 9H11V17H9V9ZM13 9H15V17H13V9Z"
+                    ></path>
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Product:</strong></td>
+                <td colspan="2" class="title"></td>
+              </tr>
+              <tr>
+                <td><strong>Price:</strong></td>
+                <td colspan="2" class="price"></td>
+              </tr>
+              <tr>
+                <td><strong>Quantity:</strong>
+                 
+                </td>
+                <td colspan="2" class="quantity">
+                  <button id="increaseQuantity" class="QuantityBtn">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+                <input type="text" value="1" class="ShowQuantity" />
+                <button id="decreaseQuantity" class="QuantityBtn">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Subtotal:</strong></td>
+                <td colspan="2" class="totalProductPrice"></td>
+              </tr>
+            </table>
+          </template>
 
           <!-- Template for dynamic rows -->
           <template class="templateCloneCard">
@@ -50,14 +102,13 @@
                   width="24"
                   height="24"
                   fill="darkgreen"
-                   id="deleteBtn"
-                  style=" cursor: pointer; "
+                  id="deleteBtn"
+                  style="cursor: pointer"
                 >
                   <path
                     d="M7 4V2H17V4H22V6H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V6H2V4H7ZM6 6V20H18V6H6ZM9 9H11V17H9V9ZM13 9H15V17H13V9Z"
                   ></path>
                 </svg>
-               
               </td>
               <td>
                 <img
@@ -92,8 +143,19 @@
             <p>Rs:100</p>
           </div>
           <div class="OrderDetails">
-            <i class="fa-solid fa-truck" style="color: #000000"></i>
-            <button class="Checkout">Proceed To Checkout</button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="64"
+              height="64"
+              fill="rgba(0,0,0,1)"
+            >
+              <path
+                d="M17 8H20L23 12.0557V18H20.9646C20.7219 19.6961 19.2632 21 17.5 21C15.7368 21 14.2781 19.6961 14.0354 18H8.96456C8.72194 19.6961 7.26324 21 5.5 21C3.73676 21 2.27806 19.6961 2.03544 18H1V6C1 5.44772 1.44772 5 2 5H16C16.5523 5 17 5.44772 17 6V8ZM17 10V13H21V12.715L18.9917 10H17Z"
+              ></path>
+            </svg>
+
+            <button href="CheckoutForm.html" class="Checkout">Proceed To Checkout</button>
           </div>
         </div>
       </section>
@@ -102,27 +164,7 @@
         <script type="module" src="./src/footer.js"></script>
       </footer>
     </main>
-    <!-- <div id="cardsContainer">
-            <template class="templateCard">
-              <div class="ImageCard">
-                <img class="imageUrl" src="" alt="Logo" />
-                <div class="ImageContent">
-                  <p class="category"></p>
-                  <section class="Stars">
-                    <i class="fa-regular fa-star" style="color: #000000"></i>
-                    <i class="fa-regular fa-star" style="color: #000000"></i>
-                    <i class="fa-regular fa-star" style="color: #000000"></i>
-                    <i class="fa-regular fa-star" style="color: #000000"></i>
-                    <i class="fa-regular fa-star" style="color: #000000"></i>
-                  </section>
-                  <h5 class="name"></h5>
-                  <h5 class="price">$15.0</h5>
-                  <p class="description">why</p>
-                  <button class="add-to-cart"><i class="ri-shopping-cart-line"></i>Add to Cart</button>
-                </div>
-              </div>
-            </template>
-          </div> -->
+   
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
       crossorigin="anonymous"

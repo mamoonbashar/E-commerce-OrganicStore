@@ -15,13 +15,16 @@ export const removeProductFromCart = (id) => {
   // );
   // console.log("this the product id ", id);
 
-  const removeRow = document.querySelector(`#card${id}`);
-  // console.log("this id added while adding it to cart", removeRow);
-  if (removeRow) {
-    localStorage.removeItem(removeRow);
+  const removeRow = document.querySelector(`#smallscreen${id}`);
+  const LargeScreenRow = document.querySelector(`#card${id}`);
+  //  console.log("this id added while adding it to cart", removeRow);
+  if (removeRow || LargeScreenRow) {
+    localStorage.removeItem(removeRow,LargeScreenRow);
     removeRow.remove();
+    LargeScreenRow.remove();
+
   }
-  // console.log('this is removing prodcut is working ')
+ 
 };
 // Deleting the side Cart Products
 export const sideCart = (id) => {

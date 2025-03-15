@@ -1,14 +1,14 @@
 const BurgerButton = document.querySelector(".BurgerIcon");
 BurgerButton.addEventListener("click", function () {
   const sidebar = document.querySelector(".SideBar");
-  document.querySelector(".SideBar").classList.add("active");
+  sidebar.classList.add("active");
   sidebar.style.display = "flex";
 });
 
 const closeSideBar = document.querySelector(".Close");
 closeSideBar.addEventListener("click", function () {
   const CloseSide = document.querySelector(".SideBar");
-  document.querySelector(".SideBar").classList.remove("active");
+  CloseSide.classList.remove("active");
   CloseSide.style.display = "none";
 });
 

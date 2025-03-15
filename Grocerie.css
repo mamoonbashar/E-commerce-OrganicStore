@@ -41,7 +41,7 @@ main {
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 100%;
   width: 40%;
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
@@ -52,7 +52,7 @@ main {
   z-index: 999;
   padding: 5px;
   justify-content: space-between;
-  transform: translateX(100%); /*Start off-screen */
+  transform: translateX(100%);
   transition: transform 0.5s ease-in-out;
 }
 .ShoppingSideBar.active {
@@ -198,11 +198,18 @@ h3 {
   flex-direction: column;
 }
 /* Nav Responsiveness */
+
 @media (max-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+  }
   #nav {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    position: fixed;
   }
   .navIcons {
     display: none;
@@ -344,7 +351,6 @@ h3 {
   text-align: center;
   height: 40px;
   width: 20%;
-  
 }
 
 .QuantityBtn {
@@ -381,7 +387,6 @@ h3 {
 .SearchingFiltering {
   width: 30%;
   height: 100%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -389,6 +394,15 @@ h3 {
   gap: 5%;
   justify-content: flex-start;
 }
+@media (max-width: 700px) {
+  .SearchingFiltering {
+    display: none;
+  }
+  #BestSelling {
+    width: 100%;
+  }
+}
+
 .inputSearch {
   width: 100%;
   height: 40%;
@@ -447,7 +461,7 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  position: relative;
+  position: static;
   justify-items: center;
   padding: 20px;
 }

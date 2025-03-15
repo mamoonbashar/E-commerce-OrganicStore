@@ -33,7 +33,7 @@ body {
   top: 0;
   right: 0;
   height: 100vh;
-  width:40%;
+  width: 40%;
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
@@ -45,19 +45,18 @@ body {
   padding: 5px;
   justify-content: space-between;
 }
-.ShoppingSideBar  a{
-     background-color: white;
-    width: 90%;
-    height: 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: black;
-    text-align: center;
-    border-style: dashed;
-  
+.ShoppingSideBar a {
+  background-color: white;
+  width: 90%;
+  height: 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  border-style: dashed;
 }
-@media (max-width:700px) {
-  .ShoppingSideBar{
+@media (max-width: 700px) {
+  .ShoppingSideBar {
     width: 100%;
   }
 }
@@ -77,7 +76,7 @@ body {
   top: 0;
   right: 0;
   height: 100vh;
-  width: 300px;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
@@ -86,10 +85,15 @@ body {
   align-items: center;
   z-index: 999;
   justify-content: space-evenly;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+}
+.SideBar.active {
+  transform: translateX(0);
 }
 .SideBar a {
   text-decoration: none;
-  color: black;
+  color: whitesmoke;
 }
 .Close {
   width: 100%;
@@ -172,10 +176,10 @@ h3 {
 
 /* Banner Starts here */
 
-
 main {
   height: calc(100vh - 70px);
   width: 100vw;
+  overflow-x: hidden;
 }
 #Banner {
   display: grid;
@@ -372,14 +376,17 @@ main {
 }
 .GroceryCard img {
   border-radius: 1rem;
-  width: 25%;
+  width: 50%;
   height: 100%;
+  object-fit: cover;
+  filter: drop-shadow(4px 8px 12px rgba(0, 0, 0, 0.4)) brightness(0.8)
+    blur(0.7px);
 }
-.GroceryCard div {
+.content-Div {
   flex-direction: column;
   display: flex;
   height: 100%;
-  width: 44%;
+  width: 50%;
   gap: 8%;
 }
 
@@ -666,29 +673,33 @@ button {
   #GrocerieContainer {
     background-color: white;
     z-index: -1;
+    width: 100vw;
   }
   #grocery {
     z-index: 0;
+    width: 100vw;
   }
   .GroceryCard {
     z-index: 1;
     position: relative;
     display: flex;
-    width: 70vw;
-    justify-content: left;
+    width: 90vw;
     padding: 2%;
-    align-items: flex-start;
   }
   .GroceryCard img {
-    width: 100%;
+    width: 90%;
+    height: 90%;
     position: absolute;
     z-index: 0;
   }
   .content-Div {
     z-index: 1;
     padding: 2%;
+    display: flex;
     position: relative;
-    width: 100%;
+    width: 90%;
+    justify-content: space-around;
+    color: rgb(255, 251, 251);
   }
 }
 #TrendingCardsContainer {

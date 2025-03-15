@@ -1,4 +1,4 @@
-import products from "../api.json" assert { type: "json" };
+import products from "../api.json";
 import { showEverythingPage } from "./Everything";
 
 showEverythingPage(products);
