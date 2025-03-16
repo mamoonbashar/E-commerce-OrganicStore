@@ -46,6 +46,10 @@ const headerHtml = `     <nav id="nav">
         </ul>
 
         <div class="BurgerIcon">
+         <a class="CartContainer">
+            <span class="cart-count">0</span>
+            <i class="fa-solid fa-basket-shopping"> </i
+          ></a>
           <a> <i class="fa-solid fa-bars"></i></a>
         </div>
         <!--  SideBar -->

@@ -12,7 +12,7 @@
   </head>
   <body>
     <header class="section-Header">
-      <script  type="module" src="src/Header.js"></script>
+      <script type="module" src="src/Header.js"></script>
     </header>
     <main>
       <section class="container">
@@ -36,7 +36,7 @@
               ame. numquam eius modi tempora incidunt lores ta porro ame.
             </p>
             <div class="Qty-btn">
-              <input placeholder="0" type="number" />
+             
               <button>ADD TO CART</button>
             </div>
             <h2>Category:<span>Groceries</span></h2>
@@ -44,70 +44,77 @@
         </section>
       </section>
       <section class="description-reviews">
-        <div class="customer-product">
-          <ul>
+        <div class="HeadingsContainer">
+          <div class="DescriptionHeading">
             <p href="#">Description</p>
-            <!-- <p class="description-content">
-              Neque porro quisquam est, qui dolore ipsum quia dolor sit amet,
-              consectetur adipisci velit, sed quia non incidunt lores ta porro
-              ame. numquam eius modi tempora incidunt lores ta porro ame.
-            </p> -->
-          </ul>
-        </div>
-        <div class="customer-product">
-          <ul>
+          </div>
+          <div class="ReviewHeading">
             <p href="#">Reviews</p>
-            <form class="ParentForm">
-              <p>There are no reviews yet.</p>
-              <section class="FormContainer">
-                <h3>Be the first to review “Handpicked Red Chillies”</h3>
-                <h4>
-                  Your email address will not be published. Required fields are
-                  marked *
-                </h4>
-                <h4>
-                  Your rating *<i
-                    class="fa-regular fa-star"
-                    style="color: #000000"
-                  ></i>
-                  <i class="fa-regular fa-star" style="color: #000000"></i>
-                  <i class="fa-regular fa-star" style="color: #000000"></i>
-                  <i class="fa-regular fa-star" style="color: #000000"></i>
-                  <i class="fa-regular fa-star" style="color: #000000"></i>
-                </h4>
+          </div>
+        </div>
+        <div class="ContentContainer">
+          <div class="customer-product">
+            <ul id="showDescription">
+              <p class="description-content">
+                Neque porro quisquam est, qui dolore ipsum quia dolor sit amet,
+                consectetur adipisci velit, sed quia non incidunt lores ta porro
+                ame. numquam eius modi tempora incidunt lores ta porro ame.
+              </p>
+            </ul>
+          </div>
+          <div class="customer-product">
+            <ul id="showReview">
+              <form class="ParentForm">
+                <div class="CautionContainer">
+                  <section class="FormContainer">
+                  <h4>There are no reviews yet.</h4>
+                  <p>Be the first to review “Handpicked Red Chillies”</p>
+                  <p>
+                    Your email address will not be published. Required fields
+                    are marked *
+                  </p>
+                  <h4>
+                    Your rating *<i
+                      class="fa-regular fa-star"
+                      style="color: #000000"
+                    ></i>
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                    <i class="fa-regular fa-star" style="color: #000000"></i>
+                  </h4>
+                </div>
+                  <div class="UserInputContainer">
+                    <label>Your Review*</label>
+                    <input type="text" value="Write Your Review" />
+                    <label for="Name">Name</label>
+                    <input type="text" />
+                    <label for="email">Email</label>
+                    <input type="email" />
+                  </div>
 
-                <label>Your Review*</label>
-                <input type="text" value="Write Your Review" />
-                <label for="Name">Name</label>
-                <input type="text" />
-                <label for="email">Email</label>
-                <input type="email" />
-
-                <!-- <label
-                  >Save my name,email,and website in this browswer for the next
-                  time i comment</label
-                >
-                <input type="checkbox" /> -->
-                <div class="checkbox-container">
-  <input type="checkbox" id="remember-me">
-  <label for="remember-me">Save my name, email, and website in this browser for the next time I comment</label>
-</div>
- <button class="ShopNow">
-          Submit
-        </button>
-              </section>
-            </form>
-          </ul>
-         
+                  <div class="checkbox-container">
+                    <input type="checkbox" id="remember-me" />
+                    <label for="remember-me"
+                      >Save my name, email, and website in this browser for the
+                      next time I comment</label
+                    >
+                    <button class="ShopNow">Submit</button>
+                  </div>
+                </section>
+              </form>
+            </ul>
+          </div>
         </div>
       </section>
-         <Footer class="section-Footer">
-     <script type="module" src="./src/footer.js"> </script>
-      </Footer>
+      <footer class="section-Footer">
+        <script type="module" src="./src/footer.js"></script>
+      </footer>
     </main>
     <script
       src="https://kit.fontawesome.com/5e42a819a3.js"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="src/productView.js"></script>
   </body>
 </html>

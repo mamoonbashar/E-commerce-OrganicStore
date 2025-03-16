@@ -25,3 +25,19 @@ const closeCart = document.querySelector(".CloseCart");
 closeCart.addEventListener("click", function () {
   CartSideBar.style.display = "none";
 });
+
+// Route For Shopping
+const shopNowBtns = document.querySelectorAll(".ShopNow");
+shopNowBtns.forEach((ShopNowbutton) => {
+  ShopNowbutton.addEventListener("click", function () {
+    window.location.href = "Everything.html";
+  });
+});
+
+// Product Closer View Image Card
+const ImageCard = document.querySelectorAll(".ImageCard");
+ImageCard.forEach((ProductView) => {
+  ProductView.addEventListener("click", function () {
+    window.location.href='productView.html'
+  });
+});
