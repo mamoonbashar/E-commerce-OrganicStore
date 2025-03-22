@@ -19,12 +19,14 @@ export const updateLocalStorage = (id, updatedQuantity, updatedPrices) => {
 
     const priceText = totalProductPrice.innerText.replace(`\u20B9`, "");
     const priceValue = parseFloat(priceText);
+  console.log( typeof priceValue);   
     if (!isNaN(priceValue)) {
       productToUpdate.PerProductPrice = priceValue;
     }
 
     localStorage.setItem("cartProductLS", JSON.stringify(cartData));
   }
+ 
 };
 
 export const increamentQuantity = (id, event, priceofThis, showTotal) => {

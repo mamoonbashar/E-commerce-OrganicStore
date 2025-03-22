@@ -9,7 +9,7 @@ const imageCard = document.querySelectorAll(".ImageCard");
 const buttonElement = document.querySelector(".buttonElement");
 const ParentCard = document.querySelector(".templateCard");
 const cardsContainer = document.querySelector("#cardsContainer"); // Visible container
-const SnackBar=document.querySelector('.snackBar');
+const SnackBar = document.querySelector(".snackBar");
 
 export const showEverythingPage = (products) => {
   if (!products) {
@@ -30,7 +30,7 @@ export const showEverythingPage = (products) => {
     const cardElement = productsClone.querySelector(".ImageCard");
     cardElement.classList.add(`card${id}`);
     // console.log("this is the id aded when click on add to cart ", cardElement);
-   
+
     productsClone
       .querySelector(".add-to-cart")
       .addEventListener("click", () => {
@@ -59,49 +59,75 @@ export const showEverythingPage = (products) => {
   });
 };
 // Searching Product
-const errorMessage = document.querySelector(".error-message");
-buttonElement.addEventListener("click", SearchHandler);
+document.addEventListener("DOMContentLoaded", function () {
+  const errorMessage = document.querySelector(".error-message");
+  const buttonElement = document.querySelector(".buttonElement");
+  const search = document.querySelector(".Search");
+  const RangeEle = document.querySelector(".Range");
+  const RangeValue1Ele = document.querySelector("#RangeValue1");
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    SearchHandler();
-  }
-});
-// Range Filter
-const RangeEle = document.querySelector(".Range");
-const RangeValue1Ele = document.querySelector("#RangeValue1");
-RangeEle.addEventListener("input", RangeFunction);
-function RangeFunction() {
-  RangeValue1Ele.value = RangeEle.value;
-}
-
-function SearchHandler() {
-  //console.log("its working ");
-  const searchValue = search.value.trim().toLowerCase();
-  if (!search.value) {
-    errorMessage.textContent = "Need a Name or Category"; // Show the error text
-    errorMessage.style.display = "block";
-  } else {
-    errorMessage.style.display = "none";
-  }
-  const rangeValue1Ele = RangeValue1Ele.value
-    ? Number(RangeValue1Ele.value)
-    : null;
-
-  imageCard.forEach((cards) => {
-    const name = cards.querySelector(".name").innerText.toLowerCase();
-    const category = cards.querySelector(".category").innerText.toLowerCase();
-    const price = Number(cards.querySelector(".price").innerText);
-    const matchesSearch =
-      name.includes(searchValue) || category.includes(searchValue);
-    if (rangeValue1Ele === null) {
-      cards.style.display = matchesSearch ? "block" : "none";
-    } else {
-      const matchesRange = price <= rangeValue1Ele;
-      cards.style.display = matchesSearch && matchesRange ? "block" : "none";
+  // MutationObserver to detect dynamic content
+  const observer = new MutationObserver(() => {
+    const imageCard = document.querySelectorAll(".ImageCard");
+    if (imageCard.length > 0) {
+      console.log("Image cards detected. Search enabled.");
+      observer.disconnect();
+      addEventListeners(imageCard);
     }
   });
-}
+
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  function addEventListeners(imageCard) {
+    buttonElement.addEventListener("click", SearchHandler);
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        SearchHandler();
+      }
+    });
+
+    RangeEle.addEventListener("input", RangeFunction);
+    function RangeFunction() {
+      RangeValue1Ele.value = RangeEle.value;
+    }
+
+    function SearchHandler() {
+      const searchValue = search.value.trim().toLowerCase();
+      if (!search.value) {
+        errorMessage.textContent = "Need a Name or Category";
+        errorMessage.style.display = "block";
+      } else {
+        errorMessage.style.display = "none";
+      }
+
+      const rangeValue1Ele = RangeValue1Ele.value
+        ? Number(RangeValue1Ele.value)
+        : null;
+
+      imageCard.forEach((cards) => {
+        const name = cards.querySelector(".name").innerText.toLowerCase();
+        const category = cards
+          .querySelector(".category")
+          .innerText.toLowerCase();
+        const price = Number(cards.querySelector(".price").innerText);
+        const matchesSearch =
+          name.includes(searchValue) || category.includes(searchValue);
+
+        if (rangeValue1Ele === null) {
+          cards.style.display = matchesSearch ? "block" : "none";
+        } else {
+          const matchesRange = price <= rangeValue1Ele;
+          cards.style.display =
+            matchesSearch && matchesRange ? "block" : "none";
+        }
+      });
+
+      
+    }
+  }
+});
+
+
 
 const BurgerButton = document.querySelector(".BurgerIcon");
 BurgerButton.addEventListener("click", function () {
@@ -138,17 +164,23 @@ closeCart.addEventListener("click", function () {
 // update Cart Count
 
 function updateCart() {
-  let arrLocalStorage = getCartProductFromLS();
-  const cartValue = document.querySelector(".cart-count");
-  // console.log(arrLocalStorage.length);
-  Number((cartValue.innerText = arrLocalStorage.length));
+  setTimeout(() => {
+    let arrLocalStorage = getCartProductFromLS();
+    const cartValue = document.querySelector(".cart-count");
+    Number((cartValue.innerText = arrLocalStorage.length));
+  }, 100); // 100ms delay
 }
 updateCart();
-document.querySelectorAll(".add-to-cart").forEach((button) => {
-  button.addEventListener("click", function () {
+// document.querySelectorAll(".add-to-cart").forEach((button) => {
+//   button.addEventListener("click", function () {
+//     updateCart();
+//     console.log("this cart Quantity length", button);
+//   });
+// });
+document.body.addEventListener("click", function (event) {
+  if (event.target.classList.contains("add-to-cart")) {
     updateCart();
-    console.log("this cart Quantity length", button);
-  });
+  }
 });
 // Quick Product Card
 const QuickPorductsTemplate = document.querySelector(".quickProducts");

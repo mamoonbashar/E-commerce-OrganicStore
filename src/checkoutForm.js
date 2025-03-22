@@ -64,14 +64,16 @@ tableBodyData.innerText = productNames;
 
 const totalPriceofAllProduct = document.querySelectorAll(".totalPrice");
 
-const EveryProduct = print1.map((ele) => ele.PerProductPrice);
-let addeed = EveryProduct.reduce((acc, add) => {
-  return acc + add;
-}).toFixed(2);
-console.log(addeed);
+const SumofProducts = print1.map((getQuantityPrice) => {
+  return getQuantityPrice.price * getQuantityPrice.quantity;
+});
+let FinalPaybleAmount = SumofProducts.reduce(
+  (acc, addition) => acc + addition,
+  0
+);
 
 totalPriceofAllProduct.forEach((totalProductinnerText) => {
-  totalProductinnerText.innerText = addeed;
+  totalProductinnerText.innerText = `\u20B9`+(parseFloat(FinalPaybleAmount).toFixed(2));
 });
 
 // Payment Option

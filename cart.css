@@ -10,140 +10,8 @@ body {
   width: 100vw;
 }
 /* Nav Styling starts here  */
-#nav {
-  height: 70px;
-  /* background-color: lightcyan; */
-  border-bottom-style: dashed;
-  border-bottom-color: green;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.navIcons {
-  width: 30vw;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  list-style-type: none;
-}
-.ShoppingSideBar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 40%;
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  z-index: 999;
-  padding: 5px;
-  justify-content: space-between;
-}
-.ShoppingSideBar button {
-  background-color: white;
-  width: 90%;
-  height: 30px;
-  border-radius: 5px;
-  border-style: dashed;
-}
-@media (max-width: 700px) {
-  .ShoppingSideBar {
-    width: 100%;
-  }
-}
-.CloseCart {
-  width: 100%;
-  height: max-content;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.5vw;
-  border-bottom: 1px solid gray;
-  padding: 2%;
-}
-.SideBar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 300px;
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  z-index: 999;
-  justify-content: space-evenly;
-}
-.SideBar a {
-  text-decoration: none;
-  color: black;
-}
-.Close {
-  width: 100%;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  padding: 0px 10% 0px;
-  height: 5%;
-}
-.Close i {
-  font-size: 1.6em;
-  color: #0a990a;
-}
-.CompanyLogo {
-  width: 30vw;
-  height: 70px;
-  position: relative;
-  bottom: 10px;
-}
-.navIcons i {
-  font-size: 1em;
-}
-.navIcons a {
-  font-size: 1em;
 
-  text-decoration: none;
-  color: #333;
-}
-.navIcons i,
-h3 {
-  color: green;
-}
-.BurgerIcon {
-  display: none;
-  /* top: 29px; */
-  align-items: center;
-  position: relative;
-  justify-content: center;
-  right: 51px;
-}
-/* Need to fix  */
-.cart-count {
-  background-color: greenyellow;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70%;
-  height: 50%;
-}
-.CartContainer {
-  width: 10%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.smallScreen{
+.smallScreen {
   display: none;
 }
 /* Nav Responsiveness */
@@ -184,30 +52,29 @@ main {
     "form";
   gap: 20px; /* Adjust spacing between elements */
   width: 100%;
-  height: 100%; 
+  height: 100%;
 }
 
 /* Responsiveness of tableContentParent */
 @media (max-width: 700px) {
-.largeScreen{
-  display: none;
-}
-.smallScreen{
-  display: block;
-  height: 90%;
-  
-  
-}
-.smallScreenProduct{
-          height: 20%;
-        width: 90%;
-}
-  
+  .largeScreen {
+    display: none;
+  }
+  .smallScreen {
+    display: block;
+    height: auto;
+    overflow-y: scroll;
+  }
+  .smallScreenProduct {
+    height: 20%;
+    width: 90%;
+  }
+
   .tableContent {
     width: 100%;
     height: 100%;
   }
-  
+
   .ProceedForm {
     flex-grow: 1;
     flex-shrink: 1;
