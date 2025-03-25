@@ -567,58 +567,6 @@ button {
   font-size: 40px;
 }
 
-#QuickLinks {
-  height: auto;
-  width: 100vw;
-  background-color: black;
-  color: gray;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  justify-items: center;
-  padding: 20px;
-}
-#QuickLinks p {
-  font-size: 20px;
-}
-#QuickLinks h1 {
-  color: white;
-  font-size: 30px;
-}
-.QuickLinks2 h1,
-.QuickLinks2 p {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin: 10px;
-}
-.Quick h1,
-.Quick p {
-  margin: 20px;
-}
-#SocialMedia {
-  border-top: 2px solid gray;
-  padding: 40px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  height: auto;
-  width: 100%;
-  color: gray;
-  background-color: black;
-  min-height: 20vh;
-  margin: 0;
-}
-#SocialMedia a i {
-  color: white;
-  width: 20px;
-  height: 30px;
-}
-.icon-container {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 20px;
-}
 
 /* Responsiveness */
 
@@ -802,14 +750,7 @@ button {
     flex-direction: column;
     align-items: center;
   }
-  #QuickLinks,
-  .QuickLinks2 {
-    display: flex;
-    width: 100vw;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
+ 
   .ImageCard {
     width: 90%;
   }

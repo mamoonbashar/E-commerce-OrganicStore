@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-const BurgerButton = document.querySelector(".BurgerIcon");
+const BurgerButton = document.querySelector(".burgerIconContainer");
 BurgerButton.addEventListener("click", function () {
   const sidebar = document.querySelector(".SideBar");
   sidebar.style.display = "flex";
@@ -166,8 +166,9 @@ closeCart.addEventListener("click", function () {
 function updateCart() {
   setTimeout(() => {
     let arrLocalStorage = getCartProductFromLS();
-    const cartValue = document.querySelector(".cart-count");
-    Number((cartValue.innerText = arrLocalStorage.length));
+     document.querySelectorAll(".cart-count").forEach((cartValue)=>{
+      Number((cartValue.innerText = arrLocalStorage.length));
+    })
   }, 100); // 100ms delay
 }
 updateCart();

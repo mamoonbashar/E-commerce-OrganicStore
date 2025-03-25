@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="Everything.css" />
     <link rel="stylesheet" href="Navbar.css">
+    <link rel="stylesheet" href="footer.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <title>About</title>
+    <title>Everything</title>
   </head>
   <body>
     <header class="section-Header">
@@ -32,40 +33,40 @@
           <div id="cardsContainer">
             <template class="templateCard">
               <div class="ImageCard">
-                <img class="imageUrl" src="" alt="Logo" />
+        <div class="imageContainer">
+          <img
+            class="imageUrl"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtywKdongNUiZ8YexgVsgx4hOkSSONFea6eA&s"
+            alt="Logo"
+          />
+        </div>
 
-                <div class="ImageContent">
-                  <p class="category"></p>
-                  <section class="Stars">
-                    <i class="fa-regular fa-star" style="color: #000000"></i>
-                    <i class="fa-regular fa-star" style="color: #000000"></i>
-                    <i class="fa-regular fa-star" style="color: #000000"></i>
-                    <i class="fa-regular fa-star" style="color: #000000"></i>
-                    <i class="fa-regular fa-star" style="color: #000000"></i>
-                  </section>
-                  <h5 class="name"></h5>
-                  <h5 class="price">$15.0</h5>
-                  <p class="description">why</p>
-                  <button class="add-to-cart">
-                    <i class="ri-shopping-cart-line"></i>Add to Cart
-                  </button>
-                  <section class="quantity">
-                    <button
-                      id="increaseQuantity"
-                      class="QuantityBtn increament"
-                    >
-                      <i class="fa-solid fa-plus"></i>
-                    </button>
-                    <input class="ShowQuantity" value="1" />
-                    <button
-                      id="decreaseQuantity"
-                      class="QuantityBtn decreament"
-                    >
-                      <i class="fa-solid fa-minus"></i>
-                    </button>
-                  </section>
-                </div>
-              </div>
+        <div class="ImageContent">
+          <p class="category"></p>
+          <section class="Stars">
+            <i class="fa-regular fa-star" style="color: #000000"></i>
+            <i class="fa-regular fa-star" style="color: #000000"></i>
+            <i class="fa-regular fa-star" style="color: #000000"></i>
+            <i class="fa-regular fa-star" style="color: #000000"></i>
+            <i class="fa-regular fa-star" style="color: #000000"></i>
+          </section>
+          <h5 class="name"></h5>
+          <h5 class="price"></h5>
+          <p class="description"></p>
+          <button class="add-to-cart">
+            <i class="ri-shopping-cart-line"></i>Add to Cart
+          </button>
+          <section class="quantity">
+            <button id="increaseQuantity" class="QuantityBtn increament">
+              <i class="fa-solid fa-plus" ></i>
+            </button>
+            <input class="ShowQuantity" value="1" />
+            <button id="decreaseQuantity" class="QuantityBtn decreament">
+              <i class="fa-solid fa-minus" ></i>
+            </button>
+          </section>
+        </div>
+      </div>
             </template>
           </div>
         </section> 

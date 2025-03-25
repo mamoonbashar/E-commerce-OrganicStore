@@ -1,9 +1,9 @@
 #nav {
   height: 70px;
-  /* background-color: lightcyan; */
+  background-color: whitesmoke;
   border-bottom-style: dashed;
   position: fixed;
-  border-bottom-color: green;
+  border-bottom-color: rgb(139, 71, 139);
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -166,11 +166,19 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
-  height: 50%;
+  width: 25px;
+  height: 25px;
 }
 .CartContainer {
   width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.burgerIconContainer {
+  width: 50%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -195,10 +203,10 @@ h3 {
     display: none;
   }
   .BurgerIcon {
-    width: 50%;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
+    width: 25%;
   }
   .BurgerIcon a i {
     font-size: 1.6em;

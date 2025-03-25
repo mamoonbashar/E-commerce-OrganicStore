@@ -19,7 +19,9 @@ const headerHtml = `     <nav id="nav">
             <span class="cart-count">0</span>
             <i class="fa-solid fa-basket-shopping"> </i
           ></a>
-          <a><i class="fa-solid fa-user" style="color: #000000"></i></a>
+          <a >
+          <i class="fa-solid fa-user" style="color: #000000"></i>
+          </a>
         </ul>
         <ul class="ShoppingSideBar">
           <span class="CloseCart">
@@ -50,7 +52,7 @@ const headerHtml = `     <nav id="nav">
             <span class="cart-count">0</span>
             <i class="fa-solid fa-basket-shopping"> </i
           ></a>
-          <a> <i class="fa-solid fa-bars"></i></a>
+          <a class='burgerIconContainer'> <i class="fa-solid fa-bars"></i></a>
         </div>
         <!--  SideBar -->
         <ul class="SideBar">
