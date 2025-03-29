@@ -14,6 +14,7 @@ export default defineConfig({
         About: resolve(__dirname, "About.html"),
         CheckoutForm: resolve(__dirname, "CheckoutForm.html"),
         productView: resolve(__dirname, "productView.html"),
+        orderPlaced: resolve(__dirname, "orderPlaced.html"),
       },
     },
   },
