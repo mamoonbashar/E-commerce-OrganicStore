@@ -5,52 +5,61 @@ const userForm = document.querySelector("#userForm");
 const getSubmitbtn = document.querySelector("#userForm button");
 const spanElement = document.createElement("span");
 spanElement.style.color = "red";
+ 
+
+// Set IDs for inputs
 inputElement.forEach((input, index) => {
   input.setAttribute("id", `inputId-${index}`);
-  input.addEventListener("click", function () {
-    // validationForm(input, index);
-    getSubmitbtn.addEventListener("click", function () {
-      validationForm(input, index);
-    });
-  });
 });
 
-function validationForm(input, index) {
-  const InputTypeElement = input.type;
-  const inputElement = input;
-  //console.log(inputElement);
-  const verify = inputElement.value.trim();
+// Form validation on submit
+userForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  let isValid = true;
 
-  if (InputTypeElement === "text") {
-    if (verify === "") {
-      // console.log("it cant be empty");
-      inputElement.value = "it can't be empty";
-      inputElement.style.color = `gray`;
-      inputElement.style.border = `1px solid salmon`;
-    } else if (verify.length < 3) {
-      console.log("shold be more than the 3 characters");
-    }
-  }
-  if (InputTypeElement === "number") {
-    const phoneNumber = document.querySelector(`#inputId-8`).value.trim();
+  inputElement.forEach((input, index) => {
+    const inputType = input.type;
+    const inputValue = input.value.trim();
 
-    if (phoneNumber.value === "") {
-      console.log("it cant be empyt");
-    } else if (phoneNumber.length < 10 || phoneNumber.length > 10) {
-      console.log("Phone Number should be at least 10 digits");
+    // Text Input Validation
+    if (inputType === "text") {
+      if (inputValue === "") {
+        input.style.border = "1px solid red";
+        input.placeholder = "Field can't be empty";
+        isValid = false;
+      } else if (inputValue.length < 3) {
+        alert(`Input at ${index + 1} should be more than 3 characters`);
+        isValid = false;
+      }
     }
-  }
-  if (InputTypeElement === "email") {
-    const emailElement = document.querySelector(`#inputId-9`);
-    let emailVerification = emailElement.value;
 
-    if (emailVerification.includes("@", ".com")) {
-      console.log("yes it has .com and @");
-    } else {
-      console.log("write a valid email id ");
+    // Number Input Validation (Phone & PIN Code)
+    if (inputType === "number") {
+      if (input.id === "inputId-8") { // Phone Number Validation
+        if (inputValue === "") {
+          alert("Phone Number cannot be empty.");
+          isValid = false;
+        } else if (inputValue.length !== 10) {
+          alert("Phone Number should be exactly 10 digits.");
+          isValid = false;
+        }
+      }
     }
+
+    // Email Validation
+    if (inputType === "email") {
+      if (!inputValue.includes("@") || !inputValue.endsWith(".com")) {
+        alert("Enter a valid Email address.");
+        isValid = false;
+      }
+    }
+  });
+
+  if (isValid) {
+    alert("Form submitted successfully!");
+    window.location.href = "orderPlaced.html";
   }
-}
+});
 
 // Total price and placeorder
 
@@ -87,3 +96,8 @@ radioBtns.forEach((radioBtns) => {
   radioBtns.addEventListener("change", findSelected);
 });
 findSelected();
+ document
+  .querySelector(".YourOrder .placeOrder button")
+  .addEventListener("click", function () {
+    window.location.href = "orderPlaced.html";
+  });

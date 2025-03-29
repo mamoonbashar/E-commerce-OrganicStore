@@ -147,7 +147,7 @@ main {
   height: 250px;
   width: 100%;
   display: flex;
-  background-color: #ffe9ff;
+  background-color: #f4fbf3;
   border-radius: 5px;
   flex-direction: column;
   align-items: center;
@@ -164,7 +164,7 @@ main {
 .add-to-cart {
   width: 40%;
   height: 40px;
-  background-color: #9a55be;
+  background-color: #008612;
   /* background-color: #e1b0fb; */
   text-align: center;
   text-transform: uppercase;
@@ -204,10 +204,10 @@ main {
   cursor: pointer;
 }
 .QuantityBtn:hover {
-  background-color: #9a55be;
+  background-color: #008612;
 }
 .QuantityBtn i {
-  color: #9a55be;
+  color: #008612;
 }
 .QuantityBtn:hover i {
   color: white;
@@ -273,13 +273,16 @@ main {
 }
 
 .buttonElement {
-  background-image: linear-gradient(
-    to right,
-    #9d50bb 0%,
-    #6e48aa 51%,
-    #9d50bb 100%
-  );
-}
+  
+    background-image: linear-gradient(
+      to right,
+      #52c234 0%,
+      #061700 51%,
+      #52c234 100%
+    );
+  }
+  
+ 
 .buttonElement {
   width: 50%;
   text-align: center;

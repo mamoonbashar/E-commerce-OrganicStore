@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Dancing Script", cursive;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbeaff;
+}
+.thankYou {
+  width: 600px;
+  border: 1px solid #d65db1;
+  height: 300px;
+  border-radius: 5px;
+  /* flex-grow: 1; */
+  display: flex;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  animation: scaleAnimation 1.5s ease 4; /* Apply the animation */
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1); /* Original size */
+  }
+  50% {
+    transform: scale(1.2); /* Expand to 120% */
+  }
+  100% {
+    transform: scale(1); /* Return to original size */
+  }
+}
+
+.thankYou h1 {
+  font-weight: bold;
+}
+.thankYou p {
+  font-size: 1.5rem;
+}
+
+.GoToShopping {
+  background-color: #b39cd0;
+  width: 25%;
+  height: 30px;
+  border: none;
+  font-weight: 600;
+  border-radius: 2px;
+  cursor: pointer;
+}
