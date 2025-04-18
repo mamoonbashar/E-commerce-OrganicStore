@@ -12,14 +12,14 @@ closeSideBar.addEventListener("click", function () {
   CloseSide.style.display = "none";
 });
 
-const CartSideBar = document.querySelector(".ShoppingSideBar");
+// const CartSideBar = document.querySelector(".ShoppingSideBar");
 
-const CartContainer = document.querySelector(".CartContainer");
-CartContainer.addEventListener("click", function () {
-  CartSideBar.style.display = "flex";
+// const CartContainer = document.querySelector(".CartContainer");
+// CartContainer.addEventListener("click", function () {
+//   CartSideBar.style.display = "flex";
 
-  //console.log("is it working");
-});
+//   //console.log("is it working");
+// });
 
 const closeCart = document.querySelector(".CloseCart");
 closeCart.addEventListener("click", function () {

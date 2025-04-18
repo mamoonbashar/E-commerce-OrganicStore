@@ -16,9 +16,13 @@ body {
   padding: 0;
   flex-direction: column;
   gap: 70px;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 main {
   height: auto;
+}
+.section-Header{
+  width: 100vw;
 }
 .snackBar {
   position: fixed;
@@ -152,6 +156,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 .ImageContent p {
   font-size: 1rem;
@@ -241,7 +246,40 @@ main {
   color: grey;
   font-size: 1.3vw;
 }
+
+/* Dark Mode */
+.DarkMode {
+  width: 80px;
+  height: 25px;
+  align-self: center;
+  display: flex;
+  background-color: lightgrey;
+  border-radius: 50px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  transition: background-color 0.5s ease-in-out;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+.toggleDarkMode {
+  width: 18px;
+  height: 18px;
+  border-radius: 50px;
+  background-color: black;
+  transition: 0.5s ease-out;
+  transform: translateX(25px);
+}
+.toggleDarkMode.turnDark {
+  transform: translateX(-25px) !important;
+}
+
+/* .toggleDarkMode.turnWhite {
+
+  transform: translateY(25px);
+} */
 /* Search -filer side bar */
+
 .SearchingFiltering {
   width: 30%;
   height: 100%;
@@ -273,16 +311,14 @@ main {
 }
 
 .buttonElement {
-  
-    background-image: linear-gradient(
-      to right,
-      #52c234 0%,
-      #061700 51%,
-      #52c234 100%
-    );
-  }
-  
- 
+  background-image: linear-gradient(
+    to right,
+    #52c234 0%,
+    #061700 51%,
+    #52c234 100%
+  );
+}
+
 .buttonElement {
   width: 50%;
   text-align: center;
