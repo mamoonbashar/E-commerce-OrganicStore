@@ -140,11 +140,12 @@ const ShowCartProduct = () => {
   });
 };
 // Changing Route to  SignUp Form
-const selectTruck = document.querySelector("svg");
+const selectTruck = document.querySelector(".truckAnimation");
 
 document.querySelector(".Checkout").addEventListener("click", truckTransiton);
 function truckTransiton() {
   selectTruck.style.animationName = "truck";
+  console.log('truck'+selectTruck)
   setTimeout(() => {
     window.location.href = "/CheckoutForm.html";
   }, 2000);

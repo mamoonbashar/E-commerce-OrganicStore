@@ -2,7 +2,7 @@
   height: 70px;
   background-color: rgb(244, 251, 243);
   border-bottom-style: dashed;
-  position: fixed;
+  position: relative;
   border-bottom-color: rgb(0, 134, 18);
   width: 100%;
   display: flex;

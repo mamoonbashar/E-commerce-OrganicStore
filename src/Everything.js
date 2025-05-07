@@ -225,117 +225,117 @@ document.querySelectorAll(".add-to-cart").forEach((button) => {
 });
 
 // Dark Mode Code
-const getToggleSwitch = document.querySelector(".toggleDarkMode");
+// const getToggleSwitch = document.querySelector(".toggleDarkMode");
 
-// Remove old style tag if it exists
-function removeExistingStyleTag() {
-  const existingStyle = document.getElementById("theme-style");
-  if (existingStyle) {
-    existingStyle.remove();
-  }
-}
+// // Remove old style tag if it exists
+// function removeExistingStyleTag() {
+//   const existingStyle = document.getElementById("theme-style");
+//   if (existingStyle) {
+//     existingStyle.remove();
+//   }
+// }
 
-function applyDarkMode() {
-  removeExistingStyleTag();
-  const style = document.createElement("style");
-  style.id = "theme-style";
-  style.textContent = `
-    * {
-      color: white;
-    }
+// function applyDarkMode() {
+//   removeExistingStyleTag();
+//   const style = document.createElement("style");
+//   style.id = "theme-style";
+//   style.textContent = `
+//     * {
+//       color: white;
+//     }
 
-    body {
-      background-color: #000000f5;
-      color: white;
-      transition: background-color 0.5s ease-in-out;
-    }
+//     body {
+//       background-color: #000000f5;
+//       color: white;
+//       transition: background-color 0.5s ease-in-out;
+//     }
 
-    .ImageContent {
-      background-color: black;
-      color: white;
-    }
+//     .ImageContent {
+//       background-color: black;
+//       color: white;
+//     }
 
-    #nav {
-      background-color: #000000f5;
-      color: white;
-    }
+//     #nav {
+//       background-color: #000000f5;
+//       color: white;
+//     }
 
-    .navIcons a,
-    .fa-solid.fa-bars,
-    .fa-solid.fa-basket-shopping,
-    .fa-regular.fa-star {
-      color: white !important;
-    }
+//     .navIcons a,
+//     .fa-solid.fa-bars,
+//     .fa-solid.fa-basket-shopping,
+//     .fa-regular.fa-star {
+//       color: white !important;
+//     }
 
-    .quickCartProducts ul li {
-      background-color: #000000f5;
-      color: white;
-    }
-  `;
-  document.head.appendChild(style);
-}
+//     .quickCartProducts ul li {
+//       background-color: #000000f5;
+//       color: white;
+//     }
+//   `;
+//   document.head.appendChild(style);
+// }
 
-function applyLightMode() {
-  removeExistingStyleTag();
-  const style = document.createElement("style");
-  style.id = "theme-style";
-  style.textContent = `
-    * {
-      color: black;
-    }
+// function applyLightMode() {
+//   removeExistingStyleTag();
+//   const style = document.createElement("style");
+//   style.id = "theme-style";
+//   style.textContent = `
+//     * {
+//       color: black;
+//     }
 
-    body {
-      background-color: white;
-      color: black;
-      transition: background-color 0.5s ease-in-out;
-    }
+//     body {
+//       background-color: white;
+//       color: black;
+//       transition: background-color 0.5s ease-in-out;
+//     }
 
-    .ImageContent {
-      background-color: #f4fbf3;
-      color: black;
-    }
+//     .ImageContent {
+//       background-color: #f4fbf3;
+//       color: black;
+//     }
 
-    #nav {
-      background-color: rgb(244, 251, 243);
-      color: black;
-    }
+//     #nav {
+//       background-color: rgb(244, 251, 243);
+//       color: black;
+//     }
 
-    .navIcons a,
-    .fa-solid.fa-bars,
-    .fa-solid.fa-basket-shopping,
-    .fa-regular.fa-star {
-      color: black !important;
-    }
+//     .navIcons a,
+//     .fa-solid.fa-bars,
+//     .fa-solid.fa-basket-shopping,
+//     .fa-regular.fa-star {
+//       color: black !important;
+//     }
 
-    .quickCartProducts ul li {
-      background-color: rgb(244, 251, 243);
-      color: black;
-    }
-  `;
-  document.head.appendChild(style);
-}
+//     .quickCartProducts ul li {
+//       background-color: rgb(244, 251, 243);
+//       color: black;
+//     }
+//   `;
+//   document.head.appendChild(style);
+// }
 
-// Apply theme on page load
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme === "dark") {
-  getToggleSwitch.classList.add("turnDark");
-  applyDarkMode();
-} else {
-  getToggleSwitch.classList.remove("turnDark");
-  applyLightMode();
-}
+// // Apply theme on page load
+// const savedTheme = localStorage.getItem("theme");
+// if (savedTheme === "dark") {
+//   getToggleSwitch.classList.add("turnDark");
+//   applyDarkMode();
+// } else {
+//   getToggleSwitch.classList.remove("turnDark");
+//   applyLightMode();
+// }
 
-// Add event listener for toggle
-getToggleSwitch.addEventListener("click", function () {
-  const isDarkMode = getToggleSwitch.classList.toggle("turnDark");
+// // Add event listener for toggle
+// getToggleSwitch.addEventListener("click", function () {
+//   const isDarkMode = getToggleSwitch.classList.toggle("turnDark");
 
-  if (isDarkMode) {
-    applyDarkMode();
-    localStorage.setItem("theme", "dark");
-  } else {
-    applyLightMode();
-    localStorage.setItem("theme", "light");
-  }
+//   if (isDarkMode) {
+//     applyDarkMode();
+//     localStorage.setItem("theme", "dark");
+//   } else {
+//     applyLightMode();
+//     localStorage.setItem("theme", "light");
+//   }
 
-  // console.log("this is else loop ")
-});
+//   // console.log("this is else loop ")
+// });

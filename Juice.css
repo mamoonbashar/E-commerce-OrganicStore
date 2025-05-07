@@ -24,7 +24,7 @@ main {
   position: fixed;
   top: 10px;
   right: 10px;
-  z-index: 10;
+  z-index: 999;
   width: 15%;
   height: 50px;
   border-radius: 5px;
